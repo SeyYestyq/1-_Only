@@ -612,6 +612,7 @@ def build_receipt(root: Path):
         "Учет приемки товаров и отправка PDF-отчета по SMTP.",
         children,
     ))
+    writer.bsl("Ext/ManagedApplicationModule.bsl", read_bsl("receipt/ManagedApplicationModule.bsl"))
     writer.xml("Languages/Русский.xml", language_xml())
     writer.xml("Roles/ПолныеПрава.xml", role_xml())
     writer.raw("Roles/ПолныеПрава/Ext/Rights.xml", rights_xml(name))
