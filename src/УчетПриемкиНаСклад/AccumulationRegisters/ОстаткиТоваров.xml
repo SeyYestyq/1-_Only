@@ -9,7 +9,7 @@
 <UseStandardCommands>true</UseStandardCommands>
 <DefaultListForm/>
 <AuxiliaryListForm/>
-<RegisterType>Balances</RegisterType>
+<RegisterType>Balance</RegisterType>
 <IncludeHelpInContents>false</IncludeHelpInContents>
 <DataLockControlMode>Managed</DataLockControlMode>
 <FullTextSearch>DontUse</FullTextSearch>
@@ -44,7 +44,7 @@
 <ChoiceForm/>
 <LinkByType/>
 <ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
-<Indexing>DontIndex</Indexing><FullTextSearch>Use</FullTextSearch>
+<FullTextSearch>Use</FullTextSearch>
 </Properties>
 </Resource>
 <Dimension uuid="0129acff-c254-5643-bba8-8433056f107c">

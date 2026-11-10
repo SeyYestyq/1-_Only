@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
 <Constant uuid="ae0bbfc9-6a99-59e0-a709-5be40cc8d0da">
-<InternalInfo>
 <InternalInfo><xr:GeneratedType name="ConstantManager.ЛогинSMTP" category="Manager"><xr:TypeId>f77b7716-0fd9-5374-beb2-9bf63932ef78</xr:TypeId><xr:ValueId>dd17201b-96ca-53e9-b88b-d548dde6b747</xr:ValueId></xr:GeneratedType><xr:GeneratedType name="ConstantValueManager.ЛогинSMTP" category="ValueManager"><xr:TypeId>bc5bfad7-f9d5-5b6b-9af4-7390ced18298</xr:TypeId><xr:ValueId>b786a833-5c0e-521c-8579-2878c640d7f6</xr:ValueId></xr:GeneratedType><xr:GeneratedType name="ConstantValueKey.ЛогинSMTP" category="ValueKey"><xr:TypeId>cd3317c6-428b-5357-9308-178d63aee5c0</xr:TypeId><xr:ValueId>09e13b3b-8668-5bea-ab5f-ff08fc45a5cb</xr:ValueId></xr:GeneratedType></InternalInfo>
-</InternalInfo>
 <Properties>
 <Name>ЛогинSMTP</Name>
 <Synonym><v8:item><v8:lang>ru</v8:lang><v8:content>Логин SMTP</v8:content></v8:item></Synonym>

@@ -44,7 +44,7 @@
 <ChoiceForm/>
 <LinkByType/>
 <ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
-<Indexing>DontIndex</Indexing><FullTextSearch>Use</FullTextSearch>
+<FullTextSearch>Use</FullTextSearch>
 </Properties>
 </Resource>
 <Dimension uuid="ea52a390-1fdd-5ff7-a6a5-ca1a537d546e">
