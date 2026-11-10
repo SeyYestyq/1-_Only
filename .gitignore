@@ -8,6 +8,7 @@ platform/
 *.epf
 *.erf
 .env
+smtp.local
 *.local.md
 secrets/
 bases/
@@ -21,3 +22,7 @@ InfoBase/
 *.lgp
 *.lck
 *.cfl
+ключи гига*
+ключи гига *
+/НАСТРОЙКИ*
+**/НАСТРОЙКИ.local.md
