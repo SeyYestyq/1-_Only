@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+<Catalog uuid="2aeae32e-7aa9-5b34-8371-a7f9d7c317a6">
+<InternalInfo><xr:GeneratedType name="CatalogObject.Контакты" category="Object"><xr:TypeId>49f4d972-f0e6-51e1-b252-0d2de9f409d0</xr:TypeId><xr:ValueId>f2f51ba2-5623-54ce-8cdb-680e7875d0ed</xr:ValueId></xr:GeneratedType><xr:GeneratedType name="CatalogRef.Контакты" category="Ref"><xr:TypeId>2cf71622-3f51-5b7e-975a-69df91b304ef</xr:TypeId><xr:ValueId>846ed60c-6da0-5b94-91b6-9f81f58ca16c</xr:ValueId></xr:GeneratedType><xr:GeneratedType name="CatalogSelection.Контакты" category="Selection"><xr:TypeId>432c19c3-9c5a-5d2a-8445-3f1027ef4470</xr:TypeId><xr:ValueId>8dcc0680-ccb8-5673-b899-0985cfb1ccf7</xr:ValueId></xr:GeneratedType><xr:GeneratedType name="CatalogList.Контакты" category="List"><xr:TypeId>3c81e9b1-8183-5311-ba57-b58fc816ac40</xr:TypeId><xr:ValueId>6bc2939a-6bdb-5b45-b5f8-ca6bdbdbc60b</xr:ValueId></xr:GeneratedType><xr:GeneratedType name="CatalogManager.Контакты" category="Manager"><xr:TypeId>5e3c37ab-22cd-540d-8dd9-5c2a3c421abf</xr:TypeId><xr:ValueId>4002e037-8f35-564b-af0a-c6e97c5fd5dc</xr:ValueId></xr:GeneratedType></InternalInfo>
+<Properties>
+<Name>Контакты</Name>
+<Synonym><v8:item><v8:lang>ru</v8:lang><v8:content>Контакты</v8:content></v8:item></Synonym>
+<Comment/>
+<Hierarchical>false</Hierarchical>
+<HierarchyType>HierarchyFoldersAndItems</HierarchyType>
+<LimitLevelCount>false</LimitLevelCount>
+<LevelCount>2</LevelCount>
+<FoldersOnTop>true</FoldersOnTop>
+<UseStandardCommands>true</UseStandardCommands>
+<Owners/>
+<SubordinationUse>ToItems</SubordinationUse>
+<CodeLength>9</CodeLength>
+<DescriptionLength>100</DescriptionLength>
+<CodeType>String</CodeType>
+<CodeAllowedLength>Variable</CodeAllowedLength>
+<CodeSeries>WholeCatalog</CodeSeries>
+<CheckUnique>true</CheckUnique>
+<Autonumbering>true</Autonumbering>
+<DefaultPresentation>AsDescription</DefaultPresentation>
+<Characteristics/>
+<PredefinedDataUpdate>Auto</PredefinedDataUpdate>
+<EditType>InDialog</EditType>
+<QuickChoice>false</QuickChoice>
+<ChoiceMode>BothWays</ChoiceMode>
+<InputByString><xr:Field>Catalog.Контакты.StandardAttribute.Description</xr:Field><xr:Field>Catalog.Контакты.StandardAttribute.Code</xr:Field></InputByString>
+<SearchStringModeOnInputByString>Begin</SearchStringModeOnInputByString>
+<FullTextSearchOnInputByString>DontUse</FullTextSearchOnInputByString>
+<ChoiceDataGetModeOnInputByString>Directly</ChoiceDataGetModeOnInputByString>
+<DefaultObjectForm/>
+<DefaultFolderForm/>
+<DefaultListForm/>
+<DefaultChoiceForm/>
+<DefaultFolderChoiceForm/>
+<AuxiliaryObjectForm/>
+<AuxiliaryFolderForm/>
+<AuxiliaryListForm/>
+<AuxiliaryChoiceForm/>
+<AuxiliaryFolderChoiceForm/>
+<IncludeHelpInContents>false</IncludeHelpInContents>
+<BasedOn/>
+<DataLockFields/>
+<DataLockControlMode>Managed</DataLockControlMode>
+<FullTextSearch>Use</FullTextSearch>
+<ObjectPresentation/>
+<ExtendedObjectPresentation/>
+<ListPresentation/>
+<ExtendedListPresentation/>
+<Explanation/>
+<CreateOnInput>Use</CreateOnInput>
+<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+<DataHistory>DontUse</DataHistory>
+<UpdateDataHistoryImmediatelyAfterWrite>false</UpdateDataHistoryImmediatelyAfterWrite>
+<ExecuteAfterWriteDataHistoryVersionProcessing>false</ExecuteAfterWriteDataHistoryVersionProcessing>
+</Properties>
+<ChildObjects>
+<Attribute uuid="06ab83e7-f931-589d-a005-7f145efff329">
+<Properties>
+<Name>Email</Name>
+<Synonym><v8:item><v8:lang>ru</v8:lang><v8:content>Email</v8:content></v8:item></Synonym>
+<Comment/>
+<Type><v8:Type>xs:string</v8:Type><v8:StringQualifiers><v8:Length>150</v8:Length><v8:AllowedLength>Variable</v8:AllowedLength></v8:StringQualifiers></Type>
+<PasswordMode>false</PasswordMode>
+<Format/>
+<EditFormat/>
+<ToolTip/>
+<MarkNegatives>false</MarkNegatives>
+<Mask/>
+<MultiLine>false</MultiLine>
+<ExtendedEdit>false</ExtendedEdit>
+<MinValue xsi:nil="true"/>
+<MaxValue xsi:nil="true"/>
+<FillFromFillingValue>false</FillFromFillingValue>
+<FillValue xsi:nil="true"/>
+<FillChecking>ShowError</FillChecking>
+<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+<ChoiceParameterLinks/>
+<ChoiceParameters/>
+<QuickChoice>Auto</QuickChoice>
+<CreateOnInput>Auto</CreateOnInput>
+<ChoiceForm/>
+<LinkByType/>
+<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+<Indexing>DontIndex</Indexing>
+<FullTextSearch>Use</FullTextSearch>
+<DataHistory>Use</DataHistory>
+</Properties>
+</Attribute>
+
+</ChildObjects>
+</Catalog>
+</MetaDataObject>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+<Constant uuid="26d300c7-359b-529a-9245-81802be762d1">
+<InternalInfo>
+<InternalInfo><xr:GeneratedType name="ConstantManager.ПортSMTP" category="Manager"><xr:TypeId>3b1ea319-5aff-5a2a-a78b-46569b9a237c</xr:TypeId><xr:ValueId>d8d3c977-e1df-583e-90e1-a9adb6b8c03d</xr:ValueId></xr:GeneratedType><xr:GeneratedType name="ConstantValueManager.ПортSMTP" category="ValueManager"><xr:TypeId>d21626b3-3c81-5a04-99a1-f4e51f31daa5</xr:TypeId><xr:ValueId>70860ff0-5ff0-52af-aae1-4a4e9f91b4b5</xr:ValueId></xr:GeneratedType><xr:GeneratedType name="ConstantValueKey.ПортSMTP" category="ValueKey"><xr:TypeId>61782742-f303-59f4-997c-82a3b1755c70</xr:TypeId><xr:ValueId>8204e312-4511-54ee-8d7c-66a19eec4a19</xr:ValueId></xr:GeneratedType></InternalInfo>
+</InternalInfo>
+<Properties>
+<Name>ПортSMTP</Name>
+<Synonym><v8:item><v8:lang>ru</v8:lang><v8:content>Порт SMTP</v8:content></v8:item></Synonym>
+<Comment/>
+<Type><v8:Type>xs:decimal</v8:Type><v8:NumberQualifiers><v8:Digits>5</v8:Digits><v8:FractionDigits>0</v8:FractionDigits><v8:AllowedSign>Nonnegative</v8:AllowedSign></v8:NumberQualifiers></Type>
+<UseStandardCommands>true</UseStandardCommands>
+<DefaultForm/>
+<ExtendedPresentation/>
+<Explanation/>
+<PasswordMode>false</PasswordMode>
+<Format/>
+<EditFormat/>
+<ToolTip/>
+<MarkNegatives>false</MarkNegatives>
+<Mask/>
+<MultiLine>false</MultiLine>
+<ExtendedEdit>false</ExtendedEdit>
+<MinValue xsi:nil="true"/>
+<MaxValue xsi:nil="true"/>
+<FillChecking>DontCheck</FillChecking>
+<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+<ChoiceParameterLinks/>
+<ChoiceParameters/>
+<QuickChoice>Auto</QuickChoice>
+<ChoiceForm/>
+<LinkByType/>
+<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+<DataLockControlMode>Managed</DataLockControlMode>
+<DataHistory>DontUse</DataHistory>
+</Properties>
+</Constant>
+</MetaDataObject>

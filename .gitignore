@@ -1,0 +1,10 @@
+.DS_Store
+__pycache__/
+*.pyc
+*.cf
+*.dt
+*.epf
+*.erf
+.env
+*.local.md
+secrets/

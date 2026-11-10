@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+<Configuration uuid="64b2a22e-c575-598f-a03e-182b4bbb6af3">
+<InternalInfo><xr:ContainedObject><xr:ClassId>9cd510cd-abfc-11d4-9434-004095e12fc7</xr:ClassId><xr:ObjectId>9f7cf35d-8da1-53bb-9356-c7fd2a36f29f</xr:ObjectId></xr:ContainedObject><xr:ContainedObject><xr:ClassId>9fcd25a0-4822-11d4-9414-008048da11f9</xr:ClassId><xr:ObjectId>15af2112-75b1-571d-aebd-25e7a2474f63</xr:ObjectId></xr:ContainedObject><xr:ContainedObject><xr:ClassId>e3687481-0a87-462c-a166-9f34594f9bba</xr:ClassId><xr:ObjectId>eba4b948-61f0-5bd6-991c-e908a2d77deb</xr:ObjectId></xr:ContainedObject><xr:ContainedObject><xr:ClassId>9de14907-ec23-4a07-96f0-85521cb6b53b</xr:ClassId><xr:ObjectId>9e23d8e3-2d43-5cd2-94d0-92f0ddf52a1e</xr:ObjectId></xr:ContainedObject><xr:ContainedObject><xr:ClassId>51f2d5d8-ea4d-4064-8892-82951750031e</xr:ClassId><xr:ObjectId>8b00a5c4-1860-54d7-be8a-9c956e1a7c11</xr:ObjectId></xr:ContainedObject><xr:ContainedObject><xr:ClassId>e68182ea-4237-4383-967f-90c1e3370bc7</xr:ClassId><xr:ObjectId>b5b3494f-fe60-5b78-a179-b0be405a34c6</xr:ObjectId></xr:ContainedObject><xr:ContainedObject><xr:ClassId>fb282519-d103-4dd3-bc12-cb271d631dfc</xr:ClassId><xr:ObjectId>03d24586-a902-5803-8292-e314b6b5d907</xr:ObjectId></xr:ContainedObject></InternalInfo>
+<Properties>
+<Name>ЧитательскийДневникПолка</Name>
+<Synonym><v8:item><v8:lang>ru</v8:lang><v8:content>Читательский дневник Полка</v8:content></v8:item></Synonym>
+<Comment>Дневник чтения: источники, сессии, заметки, прогресс и рекомендация ИИ.</Comment>
+<NamePrefix/>
+<ConfigurationExtensionCompatibilityMode>Version8_3_24</ConfigurationExtensionCompatibilityMode>
+<DefaultRunMode>ManagedApplication</DefaultRunMode>
+<UsePurposes>
+<v8:Value xsi:type="app:ApplicationUsePurpose">PlatformApplication</v8:Value>
+</UsePurposes>
+<ScriptVariant>Russian</ScriptVariant>
+<DefaultRoles>
+<xr:Item xsi:type="xr:MDObjectRef">Role.ПолныеПрава</xr:Item>
+</DefaultRoles>
+<Vendor/>
+<Version>1.0.0.1</Version>
+<UpdateCatalogAddress/>
+<IncludeHelpInContents>false</IncludeHelpInContents>
+<UseManagedFormInOrdinaryApplication>false</UseManagedFormInOrdinaryApplication>
+<UseOrdinaryFormInManagedApplication>false</UseOrdinaryFormInManagedApplication>
+<AdditionalFullTextSearchDictionaries/>
+<CommonSettingsStorage/>
+<ReportsUserSettingsStorage/>
+<ReportsVariantsStorage/>
+<FormDataSettingsStorage/>
+<DynamicListsUserSettingsStorage/>
+<URLExternalDataStorage/>
+<Content/>
+<DefaultReportForm/>
+<DefaultReportVariantForm/>
+<DefaultReportSettingsForm/>
+<DefaultReportAppearanceTemplate/>
+<DefaultDynamicListSettingsForm/>
+<DefaultSearchForm/>
+<DefaultDataHistoryChangeHistoryForm/>
+<DefaultDataHistoryVersionDataForm/>
+<DefaultDataHistoryVersionDifferencesForm/>
+<DefaultCollaborationSystemUsersChoiceForm/>
+<RequiredMobileApplicationPermissions/>
+<UsedMobileApplicationFunctionalities/>
+<StandaloneConfigurationRestrictionRoles/>
+<MobileApplicationURLs/>
+<AllowedIncomingShareRequestTypes/>
+<MainClientApplicationWindowMode>Normal</MainClientApplicationWindowMode>
+<DefaultInterface/>
+<DefaultStyle/>
+<DefaultLanguage>Language.Русский</DefaultLanguage>
+<BriefInformation/>
+<DetailedInformation/>
+<Copyright/>
+<VendorInformationAddress/>
+<ConfigurationInformationAddress/>
+<DataLockControlMode>Managed</DataLockControlMode>
+<ObjectAutonumerationMode>NotAutoFree</ObjectAutonumerationMode>
+<ModalityUseMode>DontUse</ModalityUseMode>
+<SynchronousPlatformExtensionAndAddInCallUseMode>DontUse</SynchronousPlatformExtensionAndAddInCallUseMode>
+<InterfaceCompatibilityMode>Taxi</InterfaceCompatibilityMode>
+<DatabaseTablespacesUseMode>DontUse</DatabaseTablespacesUseMode>
+<CompatibilityMode>Version8_3_24</CompatibilityMode>
+</Properties>
+<ChildObjects>
+<Language>Русский</Language><Subsystem>Полка</Subsystem><Role>ПолныеПрава</Role><CommonModule>ДневникЧтенияСервер</CommonModule><CommonModule>ЗагрузкаДемоДанныхСервер</CommonModule><CommonModule>ИнтеграцияИИСервер</CommonModule><CommonModule>НастройкиСервер</CommonModule><Constant>АдресСервисаИИ</Constant><Constant>КлючAPIИИ</Constant><Catalog>ЗаметкиКИсточникам</Catalog><Catalog>ИсточникиЧтения</Catalog><Document>СессияЧтения</Document><Enum>ТипыИсточниковЧтения</Enum><DataProcessor>ЗагрузкаДемоДанных</DataProcessor><DataProcessor>НастройкиСервисаИИ</DataProcessor><DataProcessor>РабочийСтолПолка</DataProcessor><AccumulationRegister>ПрочитанныеСтраницы</AccumulationRegister>
+</ChildObjects>
+</Configuration>
+</MetaDataObject>

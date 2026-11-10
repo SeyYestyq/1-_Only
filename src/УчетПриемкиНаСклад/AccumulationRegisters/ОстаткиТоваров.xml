@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+<AccumulationRegister uuid="6dd342ba-50ee-53c2-b340-9b3fabf06fcc">
+<InternalInfo><xr:GeneratedType name="AccumulationRegisterRecord.ОстаткиТоваров" category="Record"><xr:TypeId>5317a090-9548-59ca-bbe1-1f4d0e83f392</xr:TypeId><xr:ValueId>29ba9116-0c23-55b8-a417-3dff05df5ac4</xr:ValueId></xr:GeneratedType><xr:GeneratedType name="AccumulationRegisterManager.ОстаткиТоваров" category="Manager"><xr:TypeId>6520e8e0-df3c-5f38-994f-9579a75005ac</xr:TypeId><xr:ValueId>78c4f0ac-b122-51fc-83c0-a6e6536d7ce2</xr:ValueId></xr:GeneratedType><xr:GeneratedType name="AccumulationRegisterSelection.ОстаткиТоваров" category="Selection"><xr:TypeId>06839404-03b9-5e15-87c6-5681021fb681</xr:TypeId><xr:ValueId>3b75e8cf-4fd8-51af-9762-46261c6e1716</xr:ValueId></xr:GeneratedType><xr:GeneratedType name="AccumulationRegisterList.ОстаткиТоваров" category="List"><xr:TypeId>11c6ed56-b494-5e82-b698-d4844b97c7cc</xr:TypeId><xr:ValueId>9afe967c-1b48-5dd4-a9a8-ab43400c03e1</xr:ValueId></xr:GeneratedType><xr:GeneratedType name="AccumulationRegisterRecordSet.ОстаткиТоваров" category="RecordSet"><xr:TypeId>d0b39377-46a8-56f3-88c9-78496840b164</xr:TypeId><xr:ValueId>7370b98b-1675-52c5-ad91-0d9206c94a0b</xr:ValueId></xr:GeneratedType><xr:GeneratedType name="AccumulationRegisterRecordKey.ОстаткиТоваров" category="RecordKey"><xr:TypeId>e1cea138-0dbc-5d64-95ec-1d5fcfa095b3</xr:TypeId><xr:ValueId>ab7018a9-3e55-5002-b529-05c110aa551f</xr:ValueId></xr:GeneratedType></InternalInfo>
+<Properties>
+<Name>ОстаткиТоваров</Name>
+<Synonym><v8:item><v8:lang>ru</v8:lang><v8:content>Остатки товаров</v8:content></v8:item></Synonym>
+<Comment/>
+<UseStandardCommands>true</UseStandardCommands>
+<DefaultListForm/>
+<AuxiliaryListForm/>
+<RegisterType>Balances</RegisterType>
+<IncludeHelpInContents>false</IncludeHelpInContents>
+<DataLockControlMode>Managed</DataLockControlMode>
+<FullTextSearch>DontUse</FullTextSearch>
+<EnableTotalsSplitting>true</EnableTotalsSplitting>
+<ListPresentation/>
+<ExtendedListPresentation/>
+<Explanation/>
+</Properties>
+<ChildObjects>
+<Resource uuid="16afad0d-a1b7-5ff0-b2f7-c2bfe843d7b2">
+<Properties>
+<Name>Количество</Name>
+<Synonym><v8:item><v8:lang>ru</v8:lang><v8:content>Количество</v8:content></v8:item></Synonym>
+<Comment/>
+<Type><v8:Type>xs:decimal</v8:Type><v8:NumberQualifiers><v8:Digits>15</v8:Digits><v8:FractionDigits>0</v8:FractionDigits><v8:AllowedSign>Nonnegative</v8:AllowedSign></v8:NumberQualifiers></Type>
+<PasswordMode>false</PasswordMode>
+<Format/>
+<EditFormat/>
+<ToolTip/>
+<MarkNegatives>false</MarkNegatives>
+<Mask/>
+<MultiLine>false</MultiLine>
+<ExtendedEdit>false</ExtendedEdit>
+<MinValue xsi:nil="true"/>
+<MaxValue xsi:nil="true"/>
+<FillChecking>DontCheck</FillChecking>
+<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+<ChoiceParameterLinks/>
+<ChoiceParameters/>
+<QuickChoice>Auto</QuickChoice>
+<CreateOnInput>Auto</CreateOnInput>
+<ChoiceForm/>
+<LinkByType/>
+<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+<Indexing>DontIndex</Indexing><FullTextSearch>Use</FullTextSearch>
+</Properties>
+</Resource>
+<Dimension uuid="0129acff-c254-5643-bba8-8433056f107c">
+<Properties>
+<Name>Товар</Name>
+<Synonym><v8:item><v8:lang>ru</v8:lang><v8:content>Товар</v8:content></v8:item></Synonym>
+<Comment/>
+<Type><v8:Type>cfg:CatalogRef.Товары</v8:Type></Type>
+<PasswordMode>false</PasswordMode>
+<Format/>
+<EditFormat/>
+<ToolTip/>
+<MarkNegatives>false</MarkNegatives>
+<Mask/>
+<MultiLine>false</MultiLine>
+<ExtendedEdit>false</ExtendedEdit>
+<MinValue xsi:nil="true"/>
+<MaxValue xsi:nil="true"/>
+<FillChecking>DontCheck</FillChecking>
+<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+<ChoiceParameterLinks/>
+<ChoiceParameters/>
+<QuickChoice>Auto</QuickChoice>
+<CreateOnInput>Auto</CreateOnInput>
+<ChoiceForm/>
+<LinkByType/>
+<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+<DenyIncompleteValues>true</DenyIncompleteValues><Indexing>Index</Indexing><FullTextSearch>Use</FullTextSearch><UseInTotals>true</UseInTotals>
+</Properties>
+</Dimension>
+</ChildObjects>
+</AccumulationRegister>
+</MetaDataObject>

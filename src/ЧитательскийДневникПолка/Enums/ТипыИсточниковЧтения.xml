@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+<Enum uuid="f23ffb51-2be0-5f6b-83ab-5c71bde0ea85">
+<InternalInfo><xr:GeneratedType name="EnumRef.ТипыИсточниковЧтения" category="Ref"><xr:TypeId>9c0d3815-b0ad-5bed-b584-be5c058e6110</xr:TypeId><xr:ValueId>0fbeb80f-eba8-5045-87a5-b3a8f202dda8</xr:ValueId></xr:GeneratedType><xr:GeneratedType name="EnumManager.ТипыИсточниковЧтения" category="Manager"><xr:TypeId>35c84264-e8ea-53e5-b812-6ec3255d010b</xr:TypeId><xr:ValueId>341f879b-3720-5b0e-9de5-7dbad7d6e9ba</xr:ValueId></xr:GeneratedType><xr:GeneratedType name="EnumList.ТипыИсточниковЧтения" category="List"><xr:TypeId>6b31e21d-f02b-552f-bdb1-6a79a4aa2982</xr:TypeId><xr:ValueId>994ba11e-54d9-5546-87e6-e182ef4ce1f2</xr:ValueId></xr:GeneratedType></InternalInfo>
+<Properties>
+<Name>ТипыИсточниковЧтения</Name>
+<Synonym><v8:item><v8:lang>ru</v8:lang><v8:content>Типы источников чтения</v8:content></v8:item></Synonym>
+<Comment/>
+<UseStandardCommands>true</UseStandardCommands>
+<QuickChoice>true</QuickChoice>
+<ChoiceMode>BothWays</ChoiceMode>
+<DefaultListForm/>
+<DefaultChoiceForm/>
+<AuxiliaryListForm/>
+<AuxiliaryChoiceForm/>
+<ListPresentation/>
+<ExtendedListPresentation/>
+<Explanation/>
+<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+</Properties>
+<ChildObjects>
+<EnumValue uuid="ff57e954-4005-547f-aabf-76bdd140625d"><Properties><Name>Книга</Name><Synonym><v8:item><v8:lang>ru</v8:lang><v8:content>Книга</v8:content></v8:item></Synonym><Comment/></Properties></EnumValue><EnumValue uuid="b17e9e32-73c0-51a1-9bb6-0840eee4aa0e"><Properties><Name>Статья</Name><Synonym><v8:item><v8:lang>ru</v8:lang><v8:content>Статья</v8:content></v8:item></Synonym><Comment/></Properties></EnumValue><EnumValue uuid="9ca2f421-b2b2-539e-a2a9-a262fc047bd8"><Properties><Name>Учебник</Name><Synonym><v8:item><v8:lang>ru</v8:lang><v8:content>Учебник</v8:content></v8:item></Synonym><Comment/></Properties></EnumValue>
+</ChildObjects>
+</Enum>
+</MetaDataObject>

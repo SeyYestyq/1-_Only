@@ -1,0 +1,40 @@
+📌 Полезные ссылки с 1-го и 2-го образовательных митапов IT-марафона 1С
+
+🔹 Митап 1 (30.10.2026):
+
+1С:Напарник (Денис Сытый)
+• Получить бесплатный ключ/токен доступа: https://code.1c.ai/
+
+1С:Предприятие.Элемент (Анастасия Матросова)
+• Скачать дистрибутив / запуск в браузере: https://lang.1c.ru/
+• Документация по языку: https://1cmycloud.com/console/help/lang/docs/topics/1c-element-language-overview/
+• Сообщество разработчиков: https://developer.1c.ru/applications/Console/welcome
+
+Также упоминали:
+• Платформа для чат-ботов «Бизнес-МАКС» (MAX для бизнеса)
+• Кейсы внедрений на сайте «1С:Проект года»
+
+🔹 Митап 2 (06.11.2026):
+
+Интеграция GigaChat в 1С (Татьяна, МКСКОМ)
+• Портал разработчиков Сбера: https://developers.sber.ru/
+• Быстрый старт и получение токена: https://developers.sber.ru/docs/ru/gigachat/quickstart/ind-using-api?tool=curl#poluchenie-tokena-dostupa
+• Авторизация в GigaChat API: https://developers.sber.ru/docs/ru/gigachat/api/reference/rest/gigachat-api
+• Модели и примеры chat completions: https://developers.sber.ru/docs/ru/gigachat/models/gigachat-3-ultra
+• Структурированный вывод JSON: https://developers.sber.ru/docs/ru/gigachat/guides/structured-output
+• Потоковая генерация: https://developers.sber.ru/docs/ru/gigachat/guides/response-token-streaming
+
+Также упоминали:
+• «1С:Стандарты разработки на базовом уровне» (Валерия Тишкина)
+• Доступ и ключи к внутренней модели для кейса с бюджетом обещали выдать отдельно (Юрий)
+
+📎 Орг. ссылки марафона (с открытия 23.10.2026):
+• Сервис участника: https://1c-marathon.mirea.ru/search/help
+• Telegram-канал: https://t.me/+tfy3rCIDSAxmYTVi
+• Канал в МАКС: https://max.ru/join/A9qCERBsBKPa4_TBtOk5R8HRjBmgEtahYdTBRzsMld4
+
+Сайты и контакты партнёров из презентаций (открытие 23.10.2026):
+• Кодерлайн: https://koderline.ru (1c@koderline.ru)
+• МКСКОМ: https://mkskom.ru (feedback@mkskom.ru)
+• Мария Одинцова (1С): odim@1c.ru
+

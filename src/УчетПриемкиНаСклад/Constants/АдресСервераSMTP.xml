@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+<Constant uuid="c98d02bb-2564-534f-8aad-5845eb772680">
+<InternalInfo>
+<InternalInfo><xr:GeneratedType name="ConstantManager.АдресСервераSMTP" category="Manager"><xr:TypeId>1d392876-8cc0-5c79-959d-0666db178a51</xr:TypeId><xr:ValueId>7afe2322-4d9f-5937-9d58-c229ff24775f</xr:ValueId></xr:GeneratedType><xr:GeneratedType name="ConstantValueManager.АдресСервераSMTP" category="ValueManager"><xr:TypeId>cf7a2af1-062d-5b41-8057-abce50a58ac2</xr:TypeId><xr:ValueId>9f9702c4-185b-546a-96b4-78dbcb54d0c4</xr:ValueId></xr:GeneratedType><xr:GeneratedType name="ConstantValueKey.АдресСервераSMTP" category="ValueKey"><xr:TypeId>e76002b0-b478-58f0-a8bd-5431874dac0c</xr:TypeId><xr:ValueId>3ea2a091-1f7f-5511-85bf-3bacd43ed71d</xr:ValueId></xr:GeneratedType></InternalInfo>
+</InternalInfo>
+<Properties>
+<Name>АдресСервераSMTP</Name>
+<Synonym><v8:item><v8:lang>ru</v8:lang><v8:content>Адрес сервера SMTP</v8:content></v8:item></Synonym>
+<Comment/>
+<Type><v8:Type>xs:string</v8:Type><v8:StringQualifiers><v8:Length>100</v8:Length><v8:AllowedLength>Variable</v8:AllowedLength></v8:StringQualifiers></Type>
+<UseStandardCommands>true</UseStandardCommands>
+<DefaultForm/>
+<ExtendedPresentation/>
+<Explanation/>
+<PasswordMode>false</PasswordMode>
+<Format/>
+<EditFormat/>
+<ToolTip/>
+<MarkNegatives>false</MarkNegatives>
+<Mask/>
+<MultiLine>false</MultiLine>
+<ExtendedEdit>false</ExtendedEdit>
+<MinValue xsi:nil="true"/>
+<MaxValue xsi:nil="true"/>
+<FillChecking>DontCheck</FillChecking>
+<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+<ChoiceParameterLinks/>
+<ChoiceParameters/>
+<QuickChoice>Auto</QuickChoice>
+<ChoiceForm/>
+<LinkByType/>
+<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+<DataLockControlMode>Managed</DataLockControlMode>
+<DataHistory>DontUse</DataHistory>
+</Properties>
+</Constant>
+</MetaDataObject>

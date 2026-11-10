@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+<AccumulationRegister uuid="c3e50e44-8b5c-58c5-b5ff-f713e45061a5">
+<InternalInfo><xr:GeneratedType name="AccumulationRegisterRecord.ПрочитанныеСтраницы" category="Record"><xr:TypeId>3fed47aa-b82d-5f4b-88d1-fea387ca519a</xr:TypeId><xr:ValueId>4fa965e1-8c22-523a-91a3-d10364c909db</xr:ValueId></xr:GeneratedType><xr:GeneratedType name="AccumulationRegisterManager.ПрочитанныеСтраницы" category="Manager"><xr:TypeId>a8cacb12-4684-5089-8c45-c053ca6e132a</xr:TypeId><xr:ValueId>7c260efb-340c-5333-9556-fb5f0bbde0fe</xr:ValueId></xr:GeneratedType><xr:GeneratedType name="AccumulationRegisterSelection.ПрочитанныеСтраницы" category="Selection"><xr:TypeId>976868a8-9a26-57c2-accd-d5b79769197e</xr:TypeId><xr:ValueId>255c55c2-31ee-5371-a5f8-d8190f9dbc97</xr:ValueId></xr:GeneratedType><xr:GeneratedType name="AccumulationRegisterList.ПрочитанныеСтраницы" category="List"><xr:TypeId>dd072220-6e3d-5c10-b4ef-7bd344215412</xr:TypeId><xr:ValueId>ba5e9873-2e8e-5573-89b1-135123f046cc</xr:ValueId></xr:GeneratedType><xr:GeneratedType name="AccumulationRegisterRecordSet.ПрочитанныеСтраницы" category="RecordSet"><xr:TypeId>411f211b-ae4d-5550-8200-365da65892a3</xr:TypeId><xr:ValueId>18d5025a-5734-5d99-bf48-44da48e9947e</xr:ValueId></xr:GeneratedType><xr:GeneratedType name="AccumulationRegisterRecordKey.ПрочитанныеСтраницы" category="RecordKey"><xr:TypeId>4ef57410-4d72-5f27-a9c3-d5937b99bacf</xr:TypeId><xr:ValueId>f7db7121-69ab-5a9d-8b05-5a9c7d8992c6</xr:ValueId></xr:GeneratedType></InternalInfo>
+<Properties>
+<Name>ПрочитанныеСтраницы</Name>
+<Synonym><v8:item><v8:lang>ru</v8:lang><v8:content>Прочитанные страницы</v8:content></v8:item></Synonym>
+<Comment/>
+<UseStandardCommands>true</UseStandardCommands>
+<DefaultListForm/>
+<AuxiliaryListForm/>
+<RegisterType>Turnovers</RegisterType>
+<IncludeHelpInContents>false</IncludeHelpInContents>
+<DataLockControlMode>Managed</DataLockControlMode>
+<FullTextSearch>DontUse</FullTextSearch>
+<EnableTotalsSplitting>true</EnableTotalsSplitting>
+<ListPresentation/>
+<ExtendedListPresentation/>
+<Explanation/>
+</Properties>
+<ChildObjects>
+<Resource uuid="712f6f18-e17f-543a-a7f8-36c2f943f3d7">
+<Properties>
+<Name>КоличествоПрочитанныхСтраниц</Name>
+<Synonym><v8:item><v8:lang>ru</v8:lang><v8:content>Количество прочитанных страниц</v8:content></v8:item></Synonym>
+<Comment/>
+<Type><v8:Type>xs:decimal</v8:Type><v8:NumberQualifiers><v8:Digits>10</v8:Digits><v8:FractionDigits>0</v8:FractionDigits><v8:AllowedSign>Nonnegative</v8:AllowedSign></v8:NumberQualifiers></Type>
+<PasswordMode>false</PasswordMode>
+<Format/>
+<EditFormat/>
+<ToolTip/>
+<MarkNegatives>false</MarkNegatives>
+<Mask/>
+<MultiLine>false</MultiLine>
+<ExtendedEdit>false</ExtendedEdit>
+<MinValue xsi:nil="true"/>
+<MaxValue xsi:nil="true"/>
+<FillChecking>DontCheck</FillChecking>
+<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+<ChoiceParameterLinks/>
+<ChoiceParameters/>
+<QuickChoice>Auto</QuickChoice>
+<CreateOnInput>Auto</CreateOnInput>
+<ChoiceForm/>
+<LinkByType/>
+<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+<Indexing>DontIndex</Indexing><FullTextSearch>Use</FullTextSearch>
+</Properties>
+</Resource>
+<Dimension uuid="ea52a390-1fdd-5ff7-a6a5-ca1a537d546e">
+<Properties>
+<Name>ИсточникЧтения</Name>
+<Synonym><v8:item><v8:lang>ru</v8:lang><v8:content>Источник чтения</v8:content></v8:item></Synonym>
+<Comment/>
+<Type><v8:Type>cfg:CatalogRef.ИсточникиЧтения</v8:Type></Type>
+<PasswordMode>false</PasswordMode>
+<Format/>
+<EditFormat/>
+<ToolTip/>
+<MarkNegatives>false</MarkNegatives>
+<Mask/>
+<MultiLine>false</MultiLine>
+<ExtendedEdit>false</ExtendedEdit>
+<MinValue xsi:nil="true"/>
+<MaxValue xsi:nil="true"/>
+<FillChecking>DontCheck</FillChecking>
+<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+<ChoiceParameterLinks/>
+<ChoiceParameters/>
+<QuickChoice>Auto</QuickChoice>
+<CreateOnInput>Auto</CreateOnInput>
+<ChoiceForm/>
+<LinkByType/>
+<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+<DenyIncompleteValues>true</DenyIncompleteValues><Indexing>Index</Indexing><FullTextSearch>Use</FullTextSearch><UseInTotals>true</UseInTotals>
+</Properties>
+</Dimension>
+</ChildObjects>
+</AccumulationRegister>
+</MetaDataObject>

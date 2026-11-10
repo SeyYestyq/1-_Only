@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+<Constant uuid="d5f55bc1-8ef5-50b6-8b68-7cbd98cae2b8">
+<InternalInfo>
+<InternalInfo><xr:GeneratedType name="ConstantManager.АдресСервисаИИ" category="Manager"><xr:TypeId>10089174-e331-50eb-89aa-898cee343b0c</xr:TypeId><xr:ValueId>acb7817d-9438-57b4-b029-283b888fb3b6</xr:ValueId></xr:GeneratedType><xr:GeneratedType name="ConstantValueManager.АдресСервисаИИ" category="ValueManager"><xr:TypeId>73dec607-88e8-558d-8c6a-66ae9534b5db</xr:TypeId><xr:ValueId>a0778e36-bbe8-5102-b49e-9e2725210280</xr:ValueId></xr:GeneratedType><xr:GeneratedType name="ConstantValueKey.АдресСервисаИИ" category="ValueKey"><xr:TypeId>6f8d551c-c1bf-56cc-8f14-95dcca650802</xr:TypeId><xr:ValueId>0bbbba40-33ac-579e-95f9-25ec876172fe</xr:ValueId></xr:GeneratedType></InternalInfo>
+</InternalInfo>
+<Properties>
+<Name>АдресСервисаИИ</Name>
+<Synonym><v8:item><v8:lang>ru</v8:lang><v8:content>Адрес сервиса ИИ</v8:content></v8:item></Synonym>
+<Comment/>
+<Type><v8:Type>xs:string</v8:Type><v8:StringQualifiers><v8:Length>250</v8:Length><v8:AllowedLength>Variable</v8:AllowedLength></v8:StringQualifiers></Type>
+<UseStandardCommands>true</UseStandardCommands>
+<DefaultForm/>
+<ExtendedPresentation/>
+<Explanation/>
+<PasswordMode>false</PasswordMode>
+<Format/>
+<EditFormat/>
+<ToolTip/>
+<MarkNegatives>false</MarkNegatives>
+<Mask/>
+<MultiLine>false</MultiLine>
+<ExtendedEdit>false</ExtendedEdit>
+<MinValue xsi:nil="true"/>
+<MaxValue xsi:nil="true"/>
+<FillChecking>DontCheck</FillChecking>
+<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+<ChoiceParameterLinks/>
+<ChoiceParameters/>
+<QuickChoice>Auto</QuickChoice>
+<ChoiceForm/>
+<LinkByType/>
+<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+<DataLockControlMode>Managed</DataLockControlMode>
+<DataHistory>DontUse</DataHistory>
+</Properties>
+</Constant>
+</MetaDataObject>

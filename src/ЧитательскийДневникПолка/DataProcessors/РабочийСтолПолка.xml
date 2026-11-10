@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+<DataProcessor uuid="e0b65a6a-25a1-5c52-87d2-0c48dd36e8af">
+<InternalInfo><xr:GeneratedType name="DataProcessorObject.РабочийСтолПолка" category="Object"><xr:TypeId>f0e94a7a-d231-5861-8cba-fa09b3e4d163</xr:TypeId><xr:ValueId>0e62c6bf-ec12-5e1f-8477-e19f16eab1fe</xr:ValueId></xr:GeneratedType><xr:GeneratedType name="DataProcessorManager.РабочийСтолПолка" category="Manager"><xr:TypeId>97f68bec-1225-5ceb-9a7d-3c50170393c7</xr:TypeId><xr:ValueId>edcf043e-b5a7-5efc-9a8c-c1af3491c657</xr:ValueId></xr:GeneratedType></InternalInfo>
+<Properties>
+<Name>РабочийСтолПолка</Name>
+<Synonym><v8:item><v8:lang>ru</v8:lang><v8:content>Рабочий стол полки</v8:content></v8:item></Synonym>
+<Comment/>
+<UseStandardCommands>true</UseStandardCommands>
+<DefaultForm>DataProcessor.РабочийСтолПолка.Form.Форма</DefaultForm>
+<AuxiliaryForm/>
+<IncludeHelpInContents>false</IncludeHelpInContents>
+<ExtendedPresentation/>
+<Explanation/>
+</Properties>
+<ChildObjects>
+<Form>Форма</Form>
+</ChildObjects>
+</DataProcessor>
+</MetaDataObject>
