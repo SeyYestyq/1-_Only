@@ -87,6 +87,20 @@ def wrap(body: str) -> str:
     )
 
 
+def style_item_xml(name: str, synonym: str, hex_color: str) -> str:
+    """Элемент стиля Type=Color. hex_color вида #RRGGBB."""
+    body = f"""<StyleItem uuid="{uid('style.' + name)}">
+<Properties>
+<Name>{name}</Name>
+{syn(synonym)}
+<Comment/>
+<Type>Color</Type>
+<Value xsi:type="v8ui:Color">{hex_color}</Value>
+</Properties>
+</StyleItem>"""
+    return wrap(body)
+
+
 def generated(pairs) -> str:
     chunks = ["<InternalInfo>"]
     for name, category, key in pairs:
@@ -134,7 +148,16 @@ def type_ref(name: str) -> str:
     return f"<Type><v8:Type>cfg:{name}</v8:Type></Type>"
 
 
-def attribute_xml(name, synonym, type_xml, key, fill="DontCheck", indexing="DontIndex", password=False):
+def attribute_xml(
+    name,
+    synonym,
+    type_xml,
+    key,
+    fill="DontCheck",
+    indexing="DontIndex",
+    password=False,
+    quick_choice=False,
+):
     return f"""<Attribute uuid="{uid(key)}">
 <Properties>
 <Name>{name}</Name>
@@ -157,11 +180,11 @@ def attribute_xml(name, synonym, type_xml, key, fill="DontCheck", indexing="Dont
 <ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
 <ChoiceParameterLinks/>
 <ChoiceParameters/>
-<QuickChoice>Auto</QuickChoice>
+<QuickChoice>{"Use" if quick_choice else "Auto"}</QuickChoice>
 <CreateOnInput>Auto</CreateOnInput>
 <ChoiceForm/>
 <LinkByType/>
-<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+<ChoiceHistoryOnInput>{"DontUse" if quick_choice else "Auto"}</ChoiceHistoryOnInput>
 <Indexing>{indexing}</Indexing>
 <FullTextSearch>Use</FullTextSearch>
 <DataHistory>Use</DataHistory>
@@ -169,7 +192,7 @@ def attribute_xml(name, synonym, type_xml, key, fill="DontCheck", indexing="Dont
 </Attribute>"""
 
 
-def column_xml(name, synonym, type_xml, key, fill="DontCheck"):
+def column_xml(name, synonym, type_xml, key, fill="DontCheck", quick_choice=False):
     return f"""<Attribute uuid="{uid(key)}">
 <Properties>
 <Name>{name}</Name>
@@ -190,11 +213,11 @@ def column_xml(name, synonym, type_xml, key, fill="DontCheck"):
 <ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
 <ChoiceParameterLinks/>
 <ChoiceParameters/>
-<QuickChoice>Auto</QuickChoice>
+<QuickChoice>{"Use" if quick_choice else "Auto"}</QuickChoice>
 <CreateOnInput>Auto</CreateOnInput>
 <ChoiceForm/>
 <LinkByType/>
-<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+<ChoiceHistoryOnInput>{"DontUse" if quick_choice else "Auto"}</ChoiceHistoryOnInput>
 <Indexing>DontIndex</Indexing>
 <FullTextSearch>Use</FullTextSearch>
 <DataHistory>Use</DataHistory>
@@ -299,8 +322,10 @@ class Writer:
     def bsl(self, relative: str, text: str):
         path = self.root / relative
         path.parent.mkdir(parents=True, exist_ok=True)
-        data = text.strip() + "\n"
-        path.write_bytes(b"\xef\xbb\xbf" + data.replace("\n", "\r\n").encode("utf-8"))
+        # Исходник мог уже содержать UTF-8 BOM (например, копия из чужой выгрузки).
+        # Пишем ровно один BOM — иначе 1С видит «логическое завершение» на строке 1.
+        clean = text.lstrip("\ufeff").strip() + "\n"
+        path.write_bytes(b"\xef\xbb\xbf" + clean.replace("\n", "\r\n").encode("utf-8"))
 
 
 def form_file(unique_key, form_name, synonym, inner_xml: str):
@@ -334,6 +359,7 @@ class FormBuilder:
         self.commands = []
         self.events = []
         self.bar = []
+        self.parameters = []
 
     def nid(self) -> int:
         self.n += 1
@@ -346,31 +372,97 @@ class FormBuilder:
             f'<ExtendedTooltip name="{name}РасширеннаяПодсказка" id="{b}"/>'
         )
 
-    def command(self, name, title, button_name=None, visible=True):
+    def command(
+        self,
+        name,
+        title,
+        button_name=None,
+        visible=True,
+        default=False,
+        picture=None,
+        representation="",
+        tooltip="",
+        add_to_bar=True,
+    ):
         cid = self.nid()
+        tip = esc(tooltip) if tooltip else ""
+        pic = ""
+        if picture:
+            pic = (
+                "<Picture>"
+                f"<xr:Ref>StdPicture.{picture}</xr:Ref>"
+                "<xr:LoadTransparent>true</xr:LoadTransparent>"
+                "</Picture>"
+            )
         self.commands.append(
             f'<Command name="{name}" id="{cid}">'
             "<Title><v8:item><v8:lang>ru</v8:lang>"
             f"<v8:content>{esc(title)}</v8:content></v8:item></Title>"
-            f"<ToolTip/><Action>{name}</Action>"
+            f"<ToolTip><v8:item><v8:lang>ru</v8:lang><v8:content>{tip}</v8:content></v8:item></ToolTip>"
+            f"{pic}"
+            f"<Action>{name}</Action>"
             "<CurrentRowUse>DontUse</CurrentRowUse></Command>"
         )
+        if not add_to_bar:
+            return
         bid = self.nid()
         vis = "" if visible else "<Visible>false</Visible>"
+        def_btn = "<DefaultButton>true</DefaultButton>" if default else ""
+        repr_xml = f"<Representation>{representation}</Representation>" if representation else ""
         bname = button_name or ("Кнопка" + name)
         tip_id = self.nid()
         self.bar.append(
             f'<Button name="{bname}" id="{bid}">'
-            f"<Type>CommandBarButton</Type>{vis}"
+            f"<Type>CommandBarButton</Type>{vis}{def_btn}{repr_xml}"
             f"<CommandName>Form.Command.{name}</CommandName>"
             f'<ExtendedTooltip name="{bname}РасширеннаяПодсказка" id="{tip_id}"/>'
+            "</Button>"
+        )
+
+    def usual_button(
+        self,
+        name,
+        command_name,
+        representation="",
+        picture=None,
+    ):
+        bid = self.nid()
+        tip_id = self.nid()
+        repr_xml = f"<Representation>{representation}</Representation>" if representation else ""
+        pic = ""
+        if picture:
+            pic = (
+                "<Picture>"
+                f"<xr:Ref>StdPicture.{picture}</xr:Ref>"
+                "<xr:LoadTransparent>true</xr:LoadTransparent>"
+                "</Picture>"
+            )
+        self.children.append(
+            f'<Button name="{name}" id="{bid}">'
+            f"<Type>UsualButton</Type>{repr_xml}{pic}"
+            f"<CommandName>Form.Command.{command_name}</CommandName>"
+            f'<ExtendedTooltip name="{name}РасширеннаяПодсказка" id="{tip_id}"/>'
             "</Button>"
         )
 
     def event(self, xml_name, procedure):
         self.events.append(f'<Event name="{xml_name}">{procedure}</Event>')
 
-    def input(self, name, path, on_change=None, readonly=False, password=False, multiline=False):
+    def input(
+        self,
+        name,
+        path,
+        on_change=None,
+        readonly=False,
+        password=False,
+        multiline=False,
+        height=0,
+        text_color=None,
+        back_color=None,
+        title_location="Top",
+        quick_choice=False,
+        drop_list=False,
+    ):
         iid = self.nid()
         extra = ""
         if readonly:
@@ -378,7 +470,21 @@ class FormBuilder:
         if password:
             extra += "<PasswordMode>true</PasswordMode>"
         if multiline:
-            extra += "<MultiLine>true</MultiLine><Height>4</Height>"
+            h = height if height else 4
+            extra += f"<MultiLine>true</MultiLine><Height>{h}</Height>"
+        elif height:
+            extra += f"<Height>{height}</Height>"
+        # QuickChoice на InputField в Form.xml ломает LoadConfigFromFiles (XDTO) на 8.5.1.
+        # Быстрый список — через Catalog.QuickChoice + реквизит QuickChoice=Use.
+        if drop_list:
+            extra += "<DropListButton>true</DropListButton>"
+        if text_color:
+            extra += f"<TextColor>style:{text_color}</TextColor>"
+        if back_color:
+            extra += f"<BackColor>style:{back_color}</BackColor>"
+        if title_location:
+            extra += f"<TitleLocation>{title_location}</TitleLocation>"
+        extra += "<HorizontalAlign>Left</HorizontalAlign>"
         if on_change:
             extra += f'<Events><Event name="OnChange">{on_change}</Event></Events>'
         self.children.append(
@@ -387,12 +493,119 @@ class FormBuilder:
             f"{extra}{self.tip(name)}</InputField>"
         )
 
+    def label_field(
+        self,
+        name,
+        path,
+        text_color=None,
+        back_color=None,
+        title_location=None,
+        width=None,
+        height=0,
+        horizontal_stretch=False,
+    ):
+        iid = self.nid()
+        extra = ""
+        if text_color:
+            extra += f"<TextColor>style:{text_color}</TextColor>"
+        if back_color:
+            extra += f"<BackColor>style:{back_color}</BackColor>"
+        if title_location:
+            extra += f"<TitleLocation>{title_location}</TitleLocation>"
+        if width:
+            extra += f"<Width>{width}</Width>"
+        if height:
+            extra += f"<Height>{height}</Height><AutoMaxHeight>false</AutoMaxHeight>"
+        if horizontal_stretch:
+            extra += "<HorizontalStretch>true</HorizontalStretch><AutoMaxWidth>false</AutoMaxWidth>"
+        extra += "<HorizontalAlign>Left</HorizontalAlign>"
+        self.children.append(
+            f'<LabelField name="{name}" id="{iid}">'
+            f"<DataPath>{path}</DataPath>"
+            f"{extra}"
+            f"{self.tip(name)}</LabelField>"
+        )
+
+    def begin_group(
+        self,
+        name,
+        title,
+        horizontal=False,
+        representation="NormalSeparation",
+        show_title=True,
+        collapsed=False,
+        collapsible=False,
+    ):
+        gid = self.nid()
+        orient = "Horizontal" if horizontal else "Vertical"
+        show = "true" if show_title else "false"
+        extras = ""
+        if collapsible or collapsed:
+            extras += "<Behavior>Collapsible</Behavior>"
+            extras += f"<Collapsed>{'true' if collapsed else 'false'}</Collapsed>"
+        self.children.append(
+            f'<UsualGroup name="{name}" id="{gid}">'
+            "<Title><v8:item><v8:lang>ru</v8:lang>"
+            f"<v8:content>{esc(title)}</v8:content></v8:item></Title>"
+            f"<Group>{orient}</Group>"
+            f"<Representation>{representation}</Representation>"
+            f"<ShowTitle>{show}</ShowTitle>"
+            f"{extras}"
+            f'<ExtendedTooltip name="{name}РасширеннаяПодсказка" id="{self.nid()}"/>'
+            "<ChildItems>"
+        )
+
+    def end_group(self):
+        self.children.append("</ChildItems></UsualGroup>")
+
+    def form_table(self, name, path, columns, on_choice=None):
+        """Таблица по реквизиту формы (ValueTable), не ТЧ объекта."""
+        tid = self.nid()
+        cols = []
+        for col_name, col_path in columns:
+            cid = self.nid()
+            cols.append(
+                f'<InputField name="{name}{col_name}" id="{cid}">'
+                f"<DataPath>{col_path}</DataPath>"
+                "<ReadOnly>true</ReadOnly>"
+                f"{self.tip(name + col_name)}</InputField>"
+            )
+        events = ""
+        if on_choice:
+            events = f'<Events><Event name="Selection">{on_choice}</Event></Events>'
+        self.children.append(
+            f'<Table name="{name}" id="{tid}"><Representation>List</Representation>'
+            f"<DataPath>{path}</DataPath>"
+            "<ReadOnly>true</ReadOnly>"
+            f"{events}"
+            f'<ContextMenu name="{name}КонтекстноеМеню" id="{self.nid()}"/>'
+            f'<AutoCommandBar name="{name}КоманднаяПанель" id="{self.nid()}"><Autofill>false</Autofill></AutoCommandBar>'
+            f'<ExtendedTooltip name="{name}РасширеннаяПодсказка" id="{self.nid()}"/>'
+            f"<ChildItems>{''.join(cols)}</ChildItems></Table>"
+        )
+
+    def html_field(self, name, path, height=10, max_height=0, stretch=False):
+        iid = self.nid()
+        extra = f"<Height>{height}</Height>"
+        if max_height:
+            extra += f"<AutoMaxHeight>false</AutoMaxHeight><MaxHeight>{max_height}</MaxHeight>"
+        if stretch:
+            extra += "<VerticalStretch>true</VerticalStretch>"
+        self.children.append(
+            f'<HTMLDocumentField name="{name}" id="{iid}">'
+            f"<DataPath>{path}</DataPath>"
+            "<TitleLocation>None</TitleLocation>"
+            f"{extra}"
+            f"{self.tip(name)}</HTMLDocumentField>"
+        )
+
     def check(self, name, path):
         iid = self.nid()
         self.children.append(
             f'<CheckBoxField name="{name}" id="{iid}">'
             f"<DataPath>{path}</DataPath>"
             "<CheckBoxType>Auto</CheckBoxType>"
+            "<HorizontalAlign>Left</HorizontalAlign>"
             f"{self.tip(name)}</CheckBoxField>"
         )
 
@@ -401,6 +614,7 @@ class FormBuilder:
         self.children.append(
             f'<LabelField name="{name}" id="{iid}">'
             f"<DataPath>{path}</DataPath>"
+            "<HorizontalAlign>Left</HorizontalAlign>"
             f"{self.tip(name)}</LabelField>"
         )
 
@@ -410,19 +624,54 @@ class FormBuilder:
             f'<LabelDecoration name="{name}" id="{iid}">'
             '<Title formatted="false"><v8:item><v8:lang>ru</v8:lang>'
             f"<v8:content>{esc(text)}</v8:content></v8:item></Title>"
+            "<HorizontalAlign>Left</HorizontalAlign>"
             f"{self.tip(name)}</LabelDecoration>"
         )
 
-    def table(self, name, path, columns, on_activate=None, on_change=None):
+    def table(
+        self,
+        name,
+        path,
+        columns,
+        on_activate=None,
+        on_change=None,
+        on_start_edit=None,
+        on_before_add=None,
+        visible=True,
+    ):
         tid = self.nid()
         cols = []
-        for col_name, col_path in columns:
+        for col in columns:
+            # (name, path) | (name, path, readonly) | (name, path, readonly, opts)
+            # opts: {"drop_list": True, "on_start_choice": "HandlerName"}
+            opts = {}
+            if len(col) == 4:
+                col_name, col_path, col_readonly, opts = col
+            elif len(col) == 3:
+                col_name, col_path, col_readonly = col
+            else:
+                col_name, col_path = col
+                col_readonly = False
             cid = self.nid()
+            ro = "<ReadOnly>true</ReadOnly>" if col_readonly else ""
+            extra = ""
+            if opts.get("drop_list"):
+                extra += "<DropListButton>true</DropListButton>"
+                extra += "<ChoiceButton>false</ChoiceButton>"
+            col_events = ""
+            if opts.get("on_start_choice"):
+                col_events = (
+                    "<Events>"
+                    f'<Event name="StartChoice">{opts["on_start_choice"]}</Event>'
+                    "</Events>"
+                )
             cols.append(
                 f'<InputField name="{name}{col_name}" id="{cid}">'
                 f"<DataPath>{col_path}</DataPath>"
+                f"{ro}{extra}"
                 "<EditMode>EnterOnInput</EditMode>"
-                f"{self.tip(name + col_name)}</InputField>"
+                f"{self.tip(name + col_name)}"
+                f"{col_events}</InputField>"
             )
         events = ""
         ev = []
@@ -430,12 +679,18 @@ class FormBuilder:
             ev.append(f'<Event name="OnActivateRow">{on_activate}</Event>')
         if on_change:
             ev.append(f'<Event name="OnChange">{on_change}</Event>')
+        if on_start_edit:
+            ev.append(f'<Event name="OnStartEdit">{on_start_edit}</Event>')
+        if on_before_add:
+            ev.append(f'<Event name="BeforeAddRow">{on_before_add}</Event>')
         if ev:
             events = "<Events>" + "".join(ev) + "</Events>"
         bar_id = self.nid()
+        vis = "" if visible else "<Visible>false</Visible>"
         self.children.append(
             f'<Table name="{name}" id="{tid}"><Representation>List</Representation>'
             f"<DataPath>{path}</DataPath>"
+            f"{vis}"
             f'<ContextMenu name="{name}КонтекстноеМеню" id="{self.nid()}"/>'
             f'<AutoCommandBar name="{name}КоманднаяПанель" id="{bar_id}"/>'
             f'<ExtendedTooltip name="{name}РасширеннаяПодсказка" id="{self.nid()}"/>'
@@ -476,6 +731,11 @@ class FormBuilder:
             f"<Columns>{''.join(cols)}</Columns></Attribute>"
         )
 
+    def parameter(self, name, type_xml):
+        self.parameters.append(
+            f'<Parameter name="{name}">{type_xml}</Parameter>'
+        )
+
     def xml(self) -> str:
         events = ""
         if self.events:
@@ -486,6 +746,9 @@ class FormBuilder:
             f"<ChildItems>{''.join(self.bar)}</ChildItems>"
             "</AutoCommandBar>"
         )
+        params = ""
+        if self.parameters:
+            params = "<Parameters>" + "".join(self.parameters) + "</Parameters>"
         return (
             bar
             + events
@@ -496,4 +759,5 @@ class FormBuilder:
             + "</Attributes><Commands>"
             + "".join(self.commands)
             + "</Commands>"
+            + params
         )

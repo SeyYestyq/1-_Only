@@ -36,7 +36,7 @@ def read_bsl(relative: str) -> str:
     return (BSL / relative).read_text(encoding="utf-8")
 
 
-def configuration_xml(name, synonym, comment, children):
+def configuration_xml(name, synonym, comment, children, home_page_work_area=""):
     contained = []
     for class_id in CLASS_IDS:
         contained.append(
@@ -46,6 +46,9 @@ def configuration_xml(name, synonym, comment, children):
             "</xr:ContainedObject>"
         )
     child_xml = "".join(f"<{kind}>{obj}</{kind}>" for kind, obj in children)
+    home_xml = home_page_work_area.strip()
+    if home_xml and not home_xml.endswith("\n"):
+        home_xml += "\n"
     body = f"""<Configuration uuid="{uid(name)}">
 <InternalInfo>{''.join(contained)}</InternalInfo>
 <Properties>
@@ -104,10 +107,10 @@ def configuration_xml(name, synonym, comment, children):
 <ObjectAutonumerationMode>NotAutoFree</ObjectAutonumerationMode>
 <ModalityUseMode>DontUse</ModalityUseMode>
 <SynchronousPlatformExtensionAndAddInCallUseMode>DontUse</SynchronousPlatformExtensionAndAddInCallUseMode>
-<InterfaceCompatibilityMode>Taxi</InterfaceCompatibilityMode>
+<InterfaceCompatibilityMode>Version8_5EnableTaxi</InterfaceCompatibilityMode>
 <DatabaseTablespacesUseMode>DontUse</DatabaseTablespacesUseMode>
 <CompatibilityMode>Version8_3_24</CompatibilityMode>
-</Properties>
+{home_xml}</Properties>
 <ChildObjects>
 {child_xml}
 </ChildObjects>
@@ -168,10 +171,20 @@ def rights_xml(config_name):
 """
 
 
-def subsystem_xml(name, synonym, content_refs):
+def subsystem_xml(name, synonym, content_refs, use_one_command=False, picture=""):
     items = "".join(
         f'<xr:Item xsi:type="xr:MDObjectRef">{ref}</xr:Item>' for ref in content_refs
     )
+    one = "true" if use_one_command else "false"
+    if picture:
+        pic = (
+            "<Picture>"
+            f"<xr:Ref>StdPicture.{picture}</xr:Ref>"
+            "<xr:LoadTransparent>true</xr:LoadTransparent>"
+            "</Picture>"
+        )
+    else:
+        pic = "<Picture/>"
     return f"""<Subsystem uuid="{uid('subsystem:' + name)}">
 <Properties>
 <Name>{name}</Name>
@@ -179,9 +192,9 @@ def subsystem_xml(name, synonym, content_refs):
 <Comment/>
 <IncludeHelpInContents>false</IncludeHelpInContents>
 <IncludeInCommandInterface>true</IncludeInCommandInterface>
-<UseOneCommand>false</UseOneCommand>
+<UseOneCommand>{one}</UseOneCommand>
 <Explanation/>
-<Picture/>
+{pic}
 <Content>
 {items}
 </Content>
@@ -210,19 +223,17 @@ def module_xml(name, synonym):
 
 def constant_xml(name, synonym, type_xml, password=False):
     return f"""<Constant uuid="{uid('const:' + name)}">
-<InternalInfo>
 {generated([
     (f'ConstantManager.{name}', 'Manager', name + '.manager'),
     (f'ConstantValueManager.{name}', 'ValueManager', name + '.value'),
     (f'ConstantValueKey.{name}', 'ValueKey', name + '.key'),
 ])}
-</InternalInfo>
 <Properties>
 <Name>{name}</Name>
 {syn(synonym)}
 <Comment/>
 {type_xml}
-<UseStandardCommands>true</UseStandardCommands>
+<UseStandardCommands>false</UseStandardCommands>
 <DefaultForm/>
 <ExtendedPresentation/>
 <Explanation/>
@@ -250,13 +261,27 @@ def constant_xml(name, synonym, type_xml, password=False):
 </Constant>"""
 
 
-def catalog_xml(name, synonym, description_length, attributes, forms, owners=None, code_series="WholeCatalog", object_form=""):
+def catalog_xml(
+    name,
+    synonym,
+    description_length,
+    attributes,
+    forms,
+    owners=None,
+    code_series="WholeCatalog",
+    object_form="",
+    list_form="",
+    quick_choice=False,
+    list_presentation="",
+    description_synonym="",
+):
     owner_xml = "<Owners/>"
     if owners:
         owner_xml = "<Owners>" + "".join(
             f'<xr:Item xsi:type="xr:MDObjectRef">{item}</xr:Item>' for item in owners
         ) + "</Owners>"
     object_form_xml = f"<DefaultObjectForm>Catalog.{name}.Form.{object_form}</DefaultObjectForm>" if object_form else "<DefaultObjectForm/>"
+    list_form_xml = f"<DefaultListForm>Catalog.{name}.Form.{list_form}</DefaultListForm>" if list_form else "<DefaultListForm/>"
     input_fields = "".join(
         f"<xr:Field>Catalog.{name}.StandardAttribute.{field}</xr:Field>"
         for field in ("Description", "Code")
@@ -269,6 +294,42 @@ def catalog_xml(name, synonym, description_length, attributes, forms, owners=Non
         (f"CatalogList.{name}", "List", name + ".list"),
         (f"CatalogManager.{name}", "Manager", name + ".man"),
     ])
+    qc = "true" if quick_choice else "false"
+    if description_synonym:
+        description_syn_xml = (
+            f"<v8:item><v8:lang>ru</v8:lang><v8:content>{esc(description_synonym)}</v8:content></v8:item>"
+        )
+        standard_attrs = f"""<StandardAttributes>
+<xr:StandardAttribute name="Description">
+<xr:LinkByType/>
+<xr:FillChecking>ShowError</xr:FillChecking>
+<xr:MultiLine>false</xr:MultiLine>
+<xr:FillFromFillingValue>false</xr:FillFromFillingValue>
+<xr:CreateOnInput>Auto</xr:CreateOnInput>
+<xr:MaxValue xsi:nil="true"/>
+<xr:ToolTip/>
+<xr:ExtendedEdit>false</xr:ExtendedEdit>
+<xr:Format/>
+<xr:ChoiceForm/>
+<xr:QuickChoice>Auto</xr:QuickChoice>
+<xr:ChoiceHistoryOnInput>Auto</xr:ChoiceHistoryOnInput>
+<xr:EditFormat/>
+<xr:PasswordMode>false</xr:PasswordMode>
+<xr:DataHistory>Use</xr:DataHistory>
+<xr:MarkNegatives>false</xr:MarkNegatives>
+<xr:MinValue xsi:nil="true"/>
+<xr:Synonym>{description_syn_xml}</xr:Synonym>
+<xr:Comment/>
+<xr:FullTextSearch>Use</xr:FullTextSearch>
+<xr:ChoiceParameterLinks/>
+<xr:FillValue xsi:type="xs:string"/>
+<xr:Mask/>
+<xr:ChoiceParameters/>
+</xr:StandardAttribute>
+</StandardAttributes>
+"""
+    else:
+        standard_attrs = ""
     return f"""<Catalog uuid="{uid('catalog:' + name)}">
 {internal}
 <Properties>
@@ -291,18 +352,18 @@ def catalog_xml(name, synonym, description_length, attributes, forms, owners=Non
 <CheckUnique>true</CheckUnique>
 <Autonumbering>true</Autonumbering>
 <DefaultPresentation>AsDescription</DefaultPresentation>
-<Characteristics/>
+{standard_attrs}<Characteristics/>
 <PredefinedDataUpdate>Auto</PredefinedDataUpdate>
 <EditType>InDialog</EditType>
-<QuickChoice>false</QuickChoice>
-<ChoiceMode>BothWays</ChoiceMode>
+<QuickChoice>{qc}</QuickChoice>
+<ChoiceMode>{"QuickChoice" if quick_choice else "BothWays"}</ChoiceMode>
 <InputByString>{input_fields}</InputByString>
 <SearchStringModeOnInputByString>Begin</SearchStringModeOnInputByString>
 <FullTextSearchOnInputByString>DontUse</FullTextSearchOnInputByString>
 <ChoiceDataGetModeOnInputByString>Directly</ChoiceDataGetModeOnInputByString>
 {object_form_xml}
 <DefaultFolderForm/>
-<DefaultListForm/>
+{list_form_xml}
 <DefaultChoiceForm/>
 <DefaultFolderChoiceForm/>
 <AuxiliaryObjectForm/>
@@ -317,7 +378,7 @@ def catalog_xml(name, synonym, description_length, attributes, forms, owners=Non
 <FullTextSearch>Use</FullTextSearch>
 <ObjectPresentation/>
 <ExtendedObjectPresentation/>
-<ListPresentation/>
+{f'<ListPresentation><v8:item><v8:lang>ru</v8:lang><v8:content>{esc(list_presentation)}</v8:content></v8:item></ListPresentation>' if list_presentation else '<ListPresentation/>'}
 <ExtendedListPresentation/>
 <Explanation/>
 <CreateOnInput>Use</CreateOnInput>
