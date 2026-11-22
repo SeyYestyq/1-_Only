@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+<Enum uuid="cbdf0f75-59b6-58cc-a057-44080793a924">
+<InternalInfo><xr:GeneratedType name="EnumRef.РешенияСогласования" category="Ref"><xr:TypeId>6b3fd721-5b78-5f65-b7c1-79376a34192b</xr:TypeId><xr:ValueId>a0076d84-5a93-5ef8-aae0-8bf6b4561069</xr:ValueId></xr:GeneratedType><xr:GeneratedType name="EnumManager.РешенияСогласования" category="Manager"><xr:TypeId>d3c0affd-ccd1-5ca2-905e-3cf4f347e310</xr:TypeId><xr:ValueId>717723c3-0797-549a-923f-38366144aa90</xr:ValueId></xr:GeneratedType><xr:GeneratedType name="EnumList.РешенияСогласования" category="List"><xr:TypeId>31ed3a37-710e-5b4e-861f-a0c29455edab</xr:TypeId><xr:ValueId>25ef4630-eb46-5803-80e2-27cead7e8116</xr:ValueId></xr:GeneratedType></InternalInfo>
+<Properties>
+<Name>РешенияСогласования</Name>
+<Synonym><v8:item><v8:lang>ru</v8:lang><v8:content>Решения согласования</v8:content></v8:item></Synonym>
+<Comment/>
+<UseStandardCommands>true</UseStandardCommands>
+<QuickChoice>true</QuickChoice>
+<ChoiceMode>BothWays</ChoiceMode>
+<DefaultListForm/>
+<DefaultChoiceForm/>
+<AuxiliaryListForm/>
+<AuxiliaryChoiceForm/>
+<ListPresentation/>
+<ExtendedListPresentation/>
+<Explanation/>
+<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+</Properties>
+<ChildObjects>
+<EnumValue uuid="4fd1b827-b7b6-56e9-87ac-ede1b3dce179"><Properties><Name>Согласовано</Name><Synonym><v8:item><v8:lang>ru</v8:lang><v8:content>Согласовано</v8:content></v8:item></Synonym><Comment/></Properties></EnumValue><EnumValue uuid="4c547fc8-57b2-556c-aa11-05d7a4ac680c"><Properties><Name>Отклонено</Name><Synonym><v8:item><v8:lang>ru</v8:lang><v8:content>Отклонено</v8:content></v8:item></Synonym><Comment/></Properties></EnumValue><EnumValue uuid="d2e632c0-a45f-5403-aa70-2e35a0cf1482"><Properties><Name>ОтправленНаСогласование</Name><Synonym><v8:item><v8:lang>ru</v8:lang><v8:content>Отправлен на согласование</v8:content></v8:item></Synonym><Comment/></Properties></EnumValue><EnumValue uuid="26952ce8-bf0f-5fff-997a-417512c94218"><Properties><Name>ВозвращенНаДоработку</Name><Synonym><v8:item><v8:lang>ru</v8:lang><v8:content>Возвращён на доработку</v8:content></v8:item></Synonym><Comment/></Properties></EnumValue>
+</ChildObjects>
+</Enum>
+</MetaDataObject>

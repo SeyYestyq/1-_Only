@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+<WindowOpeningMode>Independent</WindowOpeningMode>
+<AutoTitle>true</AutoTitle>
+<CommandSet>
+<ExcludedCommand>Create</ExcludedCommand>
+</CommandSet>
+<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"><Autofill>true</Autofill><ChildItems><Button name="КнопкаСоздать" id="100"><Type>CommandBarButton</Type><DefaultButton>true</DefaultButton><CommandName>Form.Command.СоздатьДокумент</CommandName><ExtendedTooltip name="КнопкаСоздатьРасширеннаяПодсказка" id="101"/></Button><Button name="КнопкаИнструкция" id="60"><Type>CommandBarButton</Type><Representation>Picture</Representation><CommandName>Form.Command.ПоказатьИнструкцию</CommandName><ExtendedTooltip name="КнопкаИнструкцияРасширеннаяПодсказка" id="61"/></Button><Button name="КнопкаМои" id="53"><Type>CommandBarButton</Type><CommandName>Form.Command.ПоказатьТолькоМоиСогласования</CommandName><ExtendedTooltip name="КнопкаМоиРасширеннаяПодсказка" id="54"/></Button></ChildItems></AutoCommandBar>
+<Events><Event name="OnCreateAtServer">ПриСозданииНаСервере</Event></Events>
+<ChildItems>
+<UsualGroup name="ГруппаОтборы" id="82">
+<Title><v8:item><v8:lang>ru</v8:lang><v8:content>Быстрые отборы</v8:content></v8:item></Title>
+<Group>Horizontal</Group>
+<Representation>None</Representation>
+<ShowTitle>false</ShowTitle>
+<ExtendedTooltip name="ГруппаОтборыРасширеннаяПодсказка" id="83"/>
+<ChildItems><InputField name="ОтборКатегория" id="70"><DataPath>ОтборКатегория</DataPath><TitleLocation>Top</TitleLocation><Width>14</Width><AutoMaxWidth>false</AutoMaxWidth><ClearButton>true</ClearButton><Events><Event name="OnChange">ОтборПриИзменении</Event></Events><ContextMenu name="ОтборКатегорияКонтекстноеМеню" id="71"/><ExtendedTooltip name="ОтборКатегорияРасширеннаяПодсказка" id="72"/></InputField><InputField name="ОтборВидДокумента" id="73"><DataPath>ОтборВидДокумента</DataPath><TitleLocation>Top</TitleLocation><Width>14</Width><AutoMaxWidth>false</AutoMaxWidth><ClearButton>true</ClearButton><Events><Event name="OnChange">ОтборПриИзменении</Event></Events><ContextMenu name="ОтборВидДокументаКонтекстноеМеню" id="74"/><ExtendedTooltip name="ОтборВидДокументаРасширеннаяПодсказка" id="75"/></InputField><InputField name="ОтборОтветственный" id="76"><DataPath>ОтборОтветственный</DataPath><TitleLocation>Top</TitleLocation><Width>14</Width><AutoMaxWidth>false</AutoMaxWidth><ClearButton>true</ClearButton><Events><Event name="OnChange">ОтборПриИзменении</Event></Events><ContextMenu name="ОтборОтветственныйКонтекстноеМеню" id="77"/><ExtendedTooltip name="ОтборОтветственныйРасширеннаяПодсказка" id="78"/></InputField><InputField name="ОтборСтатус" id="79"><DataPath>ОтборСтатус</DataPath><TitleLocation>Top</TitleLocation><Width>14</Width><AutoMaxWidth>false</AutoMaxWidth><ClearButton>true</ClearButton><Events><Event name="OnChange">ОтборПриИзменении</Event></Events><ContextMenu name="ОтборСтатусКонтекстноеМеню" id="80"/><ExtendedTooltip name="ОтборСтатусРасширеннаяПодсказка" id="81"/></InputField><Button name="КнопкаСброситьОтборы" id="88"><Type>UsualButton</Type><CommandName>Form.Command.СброситьОтборы</CommandName><ExtendedTooltip name="КнопкаСброситьОтборыРасширеннаяПодсказка" id="89"/></Button></ChildItems>
+</UsualGroup>
+<Table name="Список" id="1">
+<Representation>List</Representation>
+<CommandBarLocation>None</CommandBarLocation>
+<DefaultItem>true</DefaultItem>
+<UseAlternationRowColor>true</UseAlternationRowColor>
+<EnableStartDrag>false</EnableStartDrag>
+<DataPath>Список</DataPath>
+<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+<AutoRefresh>false</AutoRefresh>
+<AutoRefreshPeriod>60</AutoRefreshPeriod>
+<Period>
+<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+</Period>
+<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+<RestoreCurrentRow>false</RestoreCurrentRow>
+<TopLevelParent xsi:nil="true"/>
+<ShowRoot>true</ShowRoot>
+<AllowRootChoice>false</AllowRootChoice>
+<UpdateOnDataChange>Auto</UpdateOnDataChange>
+<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
+<AutoCommandBar name="СписокКоманднаяПанель" id="3"><Autofill>true</Autofill></AutoCommandBar>
+<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="4"/>
+<SearchStringAddition name="СписокСтрокаПоиска" id="5">
+<AdditionSource><Item>Список</Item><Type>SearchStringRepresentation</Type></AdditionSource>
+<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="6"/>
+<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+</SearchStringAddition>
+<ViewStatusAddition name="СписокСостояниеПросмотра" id="8">
+<AdditionSource><Item>Список</Item><Type>ViewStatusRepresentation</Type></AdditionSource>
+<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="48"/>
+<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="49"/>
+</ViewStatusAddition>
+<SearchControlAddition name="СписокУправлениеПоиском" id="9">
+<AdditionSource><Item>Список</Item><Type>SearchControl</Type></AdditionSource>
+<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="50"/>
+<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="51"/>
+</SearchControlAddition>
+<ChildItems><LabelField name="Номер" id="10"><DataPath>Список.Number</DataPath><ContextMenu name="НомерКонтекстноеМеню" id="11"/><ExtendedTooltip name="НомерРасширеннаяПодсказка" id="12"/></LabelField><LabelField name="Дата" id="13"><DataPath>Список.Date</DataPath><ContextMenu name="ДатаКонтекстноеМеню" id="14"/><ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="15"/></LabelField><LabelField name="Категория" id="16"><DataPath>Список.Категория</DataPath><ContextMenu name="КатегорияКонтекстноеМеню" id="17"/><ExtendedTooltip name="КатегорияРасширеннаяПодсказка" id="18"/></LabelField><LabelField name="ВидДокумента" id="19"><DataPath>Список.ВидДокумента</DataPath><ContextMenu name="ВидДокументаКонтекстноеМеню" id="20"/><ExtendedTooltip name="ВидДокументаРасширеннаяПодсказка" id="21"/></LabelField><LabelField name="Ответственный" id="22"><DataPath>Список.Ответственный</DataPath><ContextMenu name="ОтветственныйКонтекстноеМеню" id="23"/><ExtendedTooltip name="ОтветственныйРасширеннаяПодсказка" id="24"/></LabelField><LabelField name="Статус" id="25"><DataPath>Список.Статус</DataPath><ContextMenu name="СтатусКонтекстноеМеню" id="26"/><ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="27"/></LabelField><LabelField name="ТекущийСогласующий" id="28"><DataPath>Список.ТекущийСогласующий</DataPath><ContextMenu name="ТекущийСогласующийКонтекстноеМеню" id="29"/><ExtendedTooltip name="ТекущийСогласующийРасширеннаяПодсказка" id="30"/></LabelField><LabelField name="ТекущийЭтап" id="31"><DataPath>Список.ТекущийЭтап</DataPath><ContextMenu name="ТекущийЭтапКонтекстноеМеню" id="32"/><ExtendedTooltip name="ТекущийЭтапРасширеннаяПодсказка" id="33"/></LabelField></ChildItems>
+</Table>
+</ChildItems>
+<Attributes>
+<Attribute name="Список" id="52">
+<Type><v8:Type>cfg:DynamicList</v8:Type></Type>
+<MainAttribute>true</MainAttribute>
+<Settings xsi:type="DynamicList">
+<ManualQuery>false</ManualQuery>
+<DynamicDataRead>true</DynamicDataRead>
+<QueryText/>
+<MainTable>Document.ДокументСЭД</MainTable>
+<ListSettings>
+<dcsset:filter>
+<dcsset:viewMode>Normal</dcsset:viewMode>
+<dcsset:userSettingID>a0000000-0000-0000-0000-000000000001</dcsset:userSettingID>
+</dcsset:filter>
+<dcsset:order>
+<dcsset:viewMode>Normal</dcsset:viewMode>
+<dcsset:userSettingID>a0000000-0000-0000-0000-000000000002</dcsset:userSettingID>
+</dcsset:order>
+<dcsset:conditionalAppearance>
+<dcsset:viewMode>Normal</dcsset:viewMode>
+<dcsset:userSettingID>a0000000-0000-0000-0000-000000000003</dcsset:userSettingID>
+</dcsset:conditionalAppearance>
+<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+<dcsset:itemsUserSettingID>a0000000-0000-0000-0000-000000000004</dcsset:itemsUserSettingID>
+</ListSettings>
+</Settings>
+</Attribute>
+<Attribute name="ТолькоМоиСогласования" id="55">
+<Title><v8:item><v8:lang>ru</v8:lang><v8:content>Только мои согласования</v8:content></v8:item></Title>
+<Type><v8:Type>xs:boolean</v8:Type></Type>
+</Attribute>
+<Attribute name="ТолькоМоиДокументы" id="105">
+<Title><v8:item><v8:lang>ru</v8:lang><v8:content>Только мои документы</v8:content></v8:item></Title>
+<Type><v8:Type>xs:boolean</v8:Type></Type>
+</Attribute>
+<Attribute name="ОтборКатегория" id="84">
+<Title><v8:item><v8:lang>ru</v8:lang><v8:content>Категория</v8:content></v8:item></Title>
+<Type><v8:Type>cfg:EnumRef.КатегорииДокументов</v8:Type></Type>
+</Attribute>
+<Attribute name="ОтборВидДокумента" id="85">
+<Title><v8:item><v8:lang>ru</v8:lang><v8:content>Вид документа</v8:content></v8:item></Title>
+<Type><v8:Type>cfg:CatalogRef.ВидыДокументов</v8:Type></Type>
+</Attribute>
+<Attribute name="ОтборОтветственный" id="86">
+<Title><v8:item><v8:lang>ru</v8:lang><v8:content>Ответственный</v8:content></v8:item></Title>
+<Type><v8:Type>cfg:CatalogRef.Сотрудники</v8:Type></Type>
+</Attribute>
+<Attribute name="ОтборСтатус" id="87">
+<Title><v8:item><v8:lang>ru</v8:lang><v8:content>Статус</v8:content></v8:item></Title>
+<Type><v8:Type>cfg:EnumRef.СтатусыДокументов</v8:Type></Type>
+</Attribute>
+</Attributes>
+<Commands>
+<Command name="СоздатьДокумент" id="102">
+<Title><v8:item><v8:lang>ru</v8:lang><v8:content>Создать</v8:content></v8:item></Title>
+<Action>СоздатьДокумент</Action>
+<CurrentRowUse>DontUse</CurrentRowUse>
+</Command>
+<Command name="ПоказатьИнструкцию" id="62">
+<Title><v8:item><v8:lang>ru</v8:lang><v8:content>Справка</v8:content></v8:item></Title>
+<ToolTip><v8:item><v8:lang>ru</v8:lang><v8:content>Справка: список документов</v8:content></v8:item></ToolTip>
+<Picture><xr:Ref>StdPicture.Information</xr:Ref><xr:LoadTransparent>true</xr:LoadTransparent></Picture>
+<Action>ПоказатьИнструкцию</Action>
+<CurrentRowUse>DontUse</CurrentRowUse>
+</Command>
+<Command name="ПоказатьТолькоМоиСогласования" id="56">
+<Title><v8:item><v8:lang>ru</v8:lang><v8:content>Мои задачи</v8:content></v8:item></Title>
+<ToolTip/><Action>ПоказатьТолькоМоиСогласования</Action>
+<CurrentRowUse>DontUse</CurrentRowUse>
+</Command>
+
+<Command name="СброситьОтборы" id="90">
+<Title><v8:item><v8:lang>ru</v8:lang><v8:content>Сбросить</v8:content></v8:item></Title>
+<ToolTip><v8:item><v8:lang>ru</v8:lang><v8:content>Очистить быстрые отборы</v8:content></v8:item></ToolTip>
+<Action>СброситьОтборы</Action>
+<CurrentRowUse>DontUse</CurrentRowUse>
+</Command>
+</Commands>
+<Parameters>
+<Parameter name="ПоказатьМоиДокументы"><Type><v8:Type>xs:boolean</v8:Type></Type></Parameter>
+<Parameter name="ПоказатьМоиСогласования"><Type><v8:Type>xs:boolean</v8:Type></Type></Parameter>
+</Parameters>
+</Form>

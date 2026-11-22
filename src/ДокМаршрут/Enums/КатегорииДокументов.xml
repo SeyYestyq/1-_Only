@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+<Enum uuid="bd8e0dc2-6442-5ca9-9f94-1e589fce85a8">
+<InternalInfo><xr:GeneratedType name="EnumRef.КатегорииДокументов" category="Ref"><xr:TypeId>bc9115b9-5c17-50ea-9d0a-9196b00ca011</xr:TypeId><xr:ValueId>6f0e3c31-c126-527e-b8f7-8c54dd4aad78</xr:ValueId></xr:GeneratedType><xr:GeneratedType name="EnumManager.КатегорииДокументов" category="Manager"><xr:TypeId>b4548867-6220-575b-8741-6ada611ca48b</xr:TypeId><xr:ValueId>506ff2fa-41a7-5088-a720-826d1313153c</xr:ValueId></xr:GeneratedType><xr:GeneratedType name="EnumList.КатегорииДокументов" category="List"><xr:TypeId>fce3440c-404e-50fa-a0f8-adaf4c6a496f</xr:TypeId><xr:ValueId>a4edb5ef-2a20-5f9d-a04f-785ee73c8249</xr:ValueId></xr:GeneratedType></InternalInfo>
+<Properties>
+<Name>КатегорииДокументов</Name>
+<Synonym><v8:item><v8:lang>ru</v8:lang><v8:content>Категории документов</v8:content></v8:item></Synonym>
+<Comment/>
+<UseStandardCommands>true</UseStandardCommands>
+<QuickChoice>true</QuickChoice>
+<ChoiceMode>BothWays</ChoiceMode>
+<DefaultListForm/>
+<DefaultChoiceForm/>
+<AuxiliaryListForm/>
+<AuxiliaryChoiceForm/>
+<ListPresentation/>
+<ExtendedListPresentation/>
+<Explanation/>
+<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+</Properties>
+<ChildObjects>
+<EnumValue uuid="e682d932-6ac9-5eb0-933f-3e6b4ad612ad"><Properties><Name>Входящий</Name><Synonym><v8:item><v8:lang>ru</v8:lang><v8:content>Входящий</v8:content></v8:item></Synonym><Comment/></Properties></EnumValue><EnumValue uuid="a360d7e9-ac32-5494-92fe-fd66ae109f24"><Properties><Name>Исходящий</Name><Synonym><v8:item><v8:lang>ru</v8:lang><v8:content>Исходящий</v8:content></v8:item></Synonym><Comment/></Properties></EnumValue><EnumValue uuid="f65da290-cfc4-58cd-ad87-890a0f369b75"><Properties><Name>Договорной</Name><Synonym><v8:item><v8:lang>ru</v8:lang><v8:content>Договорной</v8:content></v8:item></Synonym><Comment/></Properties></EnumValue>
+</ChildObjects>
+</Enum>
+</MetaDataObject>

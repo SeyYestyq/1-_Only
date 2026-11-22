@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+<InformationRegister uuid="736f0934-0221-5442-b016-3d251697b1ae">
+<InternalInfo><xr:GeneratedType name="InformationRegisterRecord.ЖурналУведомлений" category="Record"><xr:TypeId>911260e1-9b62-5ba3-97c0-97e4f9742b09</xr:TypeId><xr:ValueId>39afcbf8-0737-5c73-addc-f327de749b4d</xr:ValueId></xr:GeneratedType><xr:GeneratedType name="InformationRegisterManager.ЖурналУведомлений" category="Manager"><xr:TypeId>4e34089d-30c3-56bc-9e03-b914dcd8e283</xr:TypeId><xr:ValueId>afa9d2fa-d6c0-5546-995f-1535bfa1fed2</xr:ValueId></xr:GeneratedType><xr:GeneratedType name="InformationRegisterSelection.ЖурналУведомлений" category="Selection"><xr:TypeId>cf6a5ecd-aa55-5bcf-9308-9856edcc81a7</xr:TypeId><xr:ValueId>a905bf85-8720-57ab-b78f-9066afabc1d5</xr:ValueId></xr:GeneratedType><xr:GeneratedType name="InformationRegisterList.ЖурналУведомлений" category="List"><xr:TypeId>7c873dea-ef95-5a8b-a87d-62c8c74b1819</xr:TypeId><xr:ValueId>0ef5fab1-72ef-5767-a069-985675de579a</xr:ValueId></xr:GeneratedType><xr:GeneratedType name="InformationRegisterRecordSet.ЖурналУведомлений" category="RecordSet"><xr:TypeId>1a63c3f8-20a7-5099-8e15-5a8560899c6c</xr:TypeId><xr:ValueId>8d8f27da-1fe1-5f36-9e28-b97df4f05c81</xr:ValueId></xr:GeneratedType><xr:GeneratedType name="InformationRegisterRecordKey.ЖурналУведомлений" category="RecordKey"><xr:TypeId>7c29f5bb-68dc-54aa-9428-77414b3a41c6</xr:TypeId><xr:ValueId>2157ce35-ff1b-5d8b-ae46-44c8136e8304</xr:ValueId></xr:GeneratedType><xr:GeneratedType name="InformationRegisterRecordManager.ЖурналУведомлений" category="RecordManager"><xr:TypeId>0794619a-9bfe-55be-87f9-117addb9fd63</xr:TypeId><xr:ValueId>c3f2fb9c-e17e-5549-bc11-cf454d206f2a</xr:ValueId></xr:GeneratedType></InternalInfo>
+<Properties>
+<Name>ЖурналУведомлений</Name>
+<Synonym><v8:item><v8:lang>ru</v8:lang><v8:content>Журнал уведомлений</v8:content></v8:item></Synonym>
+<Comment/>
+<UseStandardCommands>true</UseStandardCommands>
+<EditType>InDialog</EditType>
+<DefaultRecordForm/>
+<DefaultListForm>InformationRegister.ЖурналУведомлений.Form.ФормаСписка</DefaultListForm>
+<AuxiliaryRecordForm/>
+<AuxiliaryListForm/>
+<InformationRegisterPeriodicity>Nonperiodical</InformationRegisterPeriodicity>
+<WriteMode>Independent</WriteMode>
+<MainFilterOnPeriod>false</MainFilterOnPeriod>
+<IncludeHelpInContents>false</IncludeHelpInContents>
+<DataLockControlMode>Managed</DataLockControlMode>
+<FullTextSearch>DontUse</FullTextSearch>
+<EnableTotalsSliceFirst>false</EnableTotalsSliceFirst>
+<EnableTotalsSliceLast>false</EnableTotalsSliceLast>
+<RecordPresentation/>
+<ExtendedRecordPresentation/>
+<ListPresentation/>
+<ExtendedListPresentation/>
+<Explanation/>
+<DataHistory>DontUse</DataHistory>
+<UpdateDataHistoryImmediatelyAfterWrite>false</UpdateDataHistoryImmediatelyAfterWrite>
+<ExecuteAfterWriteDataHistoryVersionProcessing>false</ExecuteAfterWriteDataHistoryVersionProcessing>
+</Properties>
+<ChildObjects>
+<Dimension uuid="17ad64ed-d681-58e7-ad54-64b70af4e5ae">
+<Properties>
+<Name>Документ</Name>
+<Synonym><v8:item><v8:lang>ru</v8:lang><v8:content>Документ</v8:content></v8:item></Synonym>
+<Comment/>
+<Type><v8:Type>cfg:DocumentRef.ДокументСЭД</v8:Type></Type>
+<PasswordMode>false</PasswordMode>
+<Format/>
+<EditFormat/>
+<ToolTip/>
+<MarkNegatives>false</MarkNegatives>
+<Mask/>
+<MultiLine>false</MultiLine>
+<ExtendedEdit>false</ExtendedEdit>
+<MinValue xsi:nil="true"/>
+<MaxValue xsi:nil="true"/>
+<FillChecking>DontCheck</FillChecking>
+<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+<ChoiceParameterLinks/>
+<ChoiceParameters/>
+<QuickChoice>Auto</QuickChoice>
+<CreateOnInput>Auto</CreateOnInput>
+<ChoiceForm/>
+<LinkByType/>
+<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+<FillFromFillingValue>false</FillFromFillingValue><FillValue xsi:nil="true"/><Master>false</Master><MainFilter>true</MainFilter><DenyIncompleteValues>true</DenyIncompleteValues><Indexing>DontIndex</Indexing><FullTextSearch>Use</FullTextSearch>
+</Properties>
+</Dimension><Dimension uuid="8f4b6070-e8ea-5516-ae9c-caf7fa495a79">
+<Properties>
+<Name>ДатаВремя</Name>
+<Synonym><v8:item><v8:lang>ru</v8:lang><v8:content>Дата и время</v8:content></v8:item></Synonym>
+<Comment/>
+<Type><v8:Type>xs:dateTime</v8:Type><v8:DateQualifiers><v8:DateFractions>DateTime</v8:DateFractions></v8:DateQualifiers></Type>
+<PasswordMode>false</PasswordMode>
+<Format/>
+<EditFormat/>
+<ToolTip/>
+<MarkNegatives>false</MarkNegatives>
+<Mask/>
+<MultiLine>false</MultiLine>
+<ExtendedEdit>false</ExtendedEdit>
+<MinValue xsi:nil="true"/>
+<MaxValue xsi:nil="true"/>
+<FillChecking>DontCheck</FillChecking>
+<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+<ChoiceParameterLinks/>
+<ChoiceParameters/>
+<QuickChoice>Auto</QuickChoice>
+<CreateOnInput>Auto</CreateOnInput>
+<ChoiceForm/>
+<LinkByType/>
+<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+<FillFromFillingValue>false</FillFromFillingValue><FillValue xsi:nil="true"/><Master>false</Master><MainFilter>true</MainFilter><DenyIncompleteValues>true</DenyIncompleteValues><Indexing>DontIndex</Indexing><FullTextSearch>Use</FullTextSearch>
+</Properties>
+</Dimension><Dimension uuid="8da3b81d-3d35-580f-8125-cd468a0a85ac">
+<Properties>
+<Name>Получатель</Name>
+<Synonym><v8:item><v8:lang>ru</v8:lang><v8:content>Получатель</v8:content></v8:item></Synonym>
+<Comment/>
+<Type><v8:Type>xs:string</v8:Type><v8:StringQualifiers><v8:Length>150</v8:Length><v8:AllowedLength>Variable</v8:AllowedLength></v8:StringQualifiers></Type>
+<PasswordMode>false</PasswordMode>
+<Format/>
+<EditFormat/>
+<ToolTip/>
+<MarkNegatives>false</MarkNegatives>
+<Mask/>
+<MultiLine>false</MultiLine>
+<ExtendedEdit>false</ExtendedEdit>
+<MinValue xsi:nil="true"/>
+<MaxValue xsi:nil="true"/>
+<FillChecking>DontCheck</FillChecking>
+<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+<ChoiceParameterLinks/>
+<ChoiceParameters/>
+<QuickChoice>Auto</QuickChoice>
+<CreateOnInput>Auto</CreateOnInput>
+<ChoiceForm/>
+<LinkByType/>
+<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+<FillFromFillingValue>false</FillFromFillingValue><FillValue xsi:nil="true"/><Master>false</Master><MainFilter>true</MainFilter><DenyIncompleteValues>false</DenyIncompleteValues><Indexing>DontIndex</Indexing><FullTextSearch>Use</FullTextSearch>
+</Properties>
+</Dimension><Dimension uuid="991bd8f5-0107-54bf-9c4d-79da8087fa73">
+<Properties>
+<Name>Канал</Name>
+<Synonym><v8:item><v8:lang>ru</v8:lang><v8:content>Канал</v8:content></v8:item></Synonym>
+<Comment/>
+<Type><v8:Type>cfg:EnumRef.КаналыУведомлений</v8:Type></Type>
+<PasswordMode>false</PasswordMode>
+<Format/>
+<EditFormat/>
+<ToolTip/>
+<MarkNegatives>false</MarkNegatives>
+<Mask/>
+<MultiLine>false</MultiLine>
+<ExtendedEdit>false</ExtendedEdit>
+<MinValue xsi:nil="true"/>
+<MaxValue xsi:nil="true"/>
+<FillChecking>DontCheck</FillChecking>
+<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+<ChoiceParameterLinks/>
+<ChoiceParameters/>
+<QuickChoice>Auto</QuickChoice>
+<CreateOnInput>Auto</CreateOnInput>
+<ChoiceForm/>
+<LinkByType/>
+<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+<FillFromFillingValue>false</FillFromFillingValue><FillValue xsi:nil="true"/><Master>false</Master><MainFilter>true</MainFilter><DenyIncompleteValues>true</DenyIncompleteValues><Indexing>DontIndex</Indexing><FullTextSearch>Use</FullTextSearch>
+</Properties>
+</Dimension><Dimension uuid="b036f970-3ea2-5f2a-a454-28c251900b22">
+<Properties>
+<Name>ИдентификаторПопытки</Name>
+<Synonym><v8:item><v8:lang>ru</v8:lang><v8:content>Идентификатор попытки</v8:content></v8:item></Synonym>
+<Comment/>
+<Type><v8:Type>xs:string</v8:Type><v8:StringQualifiers><v8:Length>36</v8:Length><v8:AllowedLength>Variable</v8:AllowedLength></v8:StringQualifiers></Type>
+<PasswordMode>false</PasswordMode>
+<Format/>
+<EditFormat/>
+<ToolTip/>
+<MarkNegatives>false</MarkNegatives>
+<Mask/>
+<MultiLine>false</MultiLine>
+<ExtendedEdit>false</ExtendedEdit>
+<MinValue xsi:nil="true"/>
+<MaxValue xsi:nil="true"/>
+<FillChecking>DontCheck</FillChecking>
+<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+<ChoiceParameterLinks/>
+<ChoiceParameters/>
+<QuickChoice>Auto</QuickChoice>
+<CreateOnInput>Auto</CreateOnInput>
+<ChoiceForm/>
+<LinkByType/>
+<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+<FillFromFillingValue>false</FillFromFillingValue><FillValue xsi:nil="true"/><Master>false</Master><MainFilter>true</MainFilter><DenyIncompleteValues>false</DenyIncompleteValues><Indexing>DontIndex</Indexing><FullTextSearch>Use</FullTextSearch>
+</Properties>
+</Dimension>
+<Resource uuid="a1a9aa0c-f931-56cd-892d-fdfff51fa209">
+<Properties>
+<Name>Событие</Name>
+<Synonym><v8:item><v8:lang>ru</v8:lang><v8:content>Событие</v8:content></v8:item></Synonym>
+<Comment/>
+<Type><v8:Type>xs:string</v8:Type><v8:StringQualifiers><v8:Length>100</v8:Length><v8:AllowedLength>Variable</v8:AllowedLength></v8:StringQualifiers></Type>
+<PasswordMode>false</PasswordMode>
+<Format/>
+<EditFormat/>
+<ToolTip/>
+<MarkNegatives>false</MarkNegatives>
+<Mask/>
+<MultiLine>false</MultiLine>
+<ExtendedEdit>false</ExtendedEdit>
+<MinValue xsi:nil="true"/>
+<MaxValue xsi:nil="true"/>
+<FillChecking>DontCheck</FillChecking>
+<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+<ChoiceParameterLinks/>
+<ChoiceParameters/>
+<QuickChoice>Auto</QuickChoice>
+<CreateOnInput>Auto</CreateOnInput>
+<ChoiceForm/>
+<LinkByType/>
+<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+<Indexing>DontIndex</Indexing><FullTextSearch>Use</FullTextSearch>
+</Properties>
+</Resource><Resource uuid="43599782-0ba5-5222-bbd9-b60108c02e76">
+<Properties>
+<Name>Успешно</Name>
+<Synonym><v8:item><v8:lang>ru</v8:lang><v8:content>Успешно</v8:content></v8:item></Synonym>
+<Comment/>
+<Type><v8:Type>xs:boolean</v8:Type></Type>
+<PasswordMode>false</PasswordMode>
+<Format/>
+<EditFormat/>
+<ToolTip/>
+<MarkNegatives>false</MarkNegatives>
+<Mask/>
+<MultiLine>false</MultiLine>
+<ExtendedEdit>false</ExtendedEdit>
+<MinValue xsi:nil="true"/>
+<MaxValue xsi:nil="true"/>
+<FillChecking>DontCheck</FillChecking>
+<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+<ChoiceParameterLinks/>
+<ChoiceParameters/>
+<QuickChoice>Auto</QuickChoice>
+<CreateOnInput>Auto</CreateOnInput>
+<ChoiceForm/>
+<LinkByType/>
+<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+<Indexing>DontIndex</Indexing><FullTextSearch>Use</FullTextSearch>
+</Properties>
+</Resource><Resource uuid="8b2b61a5-c87a-5b64-8dd5-3301b1944454">
+<Properties>
+<Name>ТекстОшибки</Name>
+<Synonym><v8:item><v8:lang>ru</v8:lang><v8:content>Текст ошибки</v8:content></v8:item></Synonym>
+<Comment/>
+<Type><v8:Type>xs:string</v8:Type><v8:StringQualifiers><v8:Length>0</v8:Length><v8:AllowedLength>Variable</v8:AllowedLength></v8:StringQualifiers></Type>
+<PasswordMode>false</PasswordMode>
+<Format/>
+<EditFormat/>
+<ToolTip/>
+<MarkNegatives>false</MarkNegatives>
+<Mask/>
+<MultiLine>false</MultiLine>
+<ExtendedEdit>false</ExtendedEdit>
+<MinValue xsi:nil="true"/>
+<MaxValue xsi:nil="true"/>
+<FillChecking>DontCheck</FillChecking>
+<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+<ChoiceParameterLinks/>
+<ChoiceParameters/>
+<QuickChoice>Auto</QuickChoice>
+<CreateOnInput>Auto</CreateOnInput>
+<ChoiceForm/>
+<LinkByType/>
+<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+<Indexing>DontIndex</Indexing><FullTextSearch>Use</FullTextSearch>
+</Properties>
+</Resource><Resource uuid="4c37c026-c1b6-556a-b057-ed731b55a39c">
+<Properties>
+<Name>Попытка</Name>
+<Synonym><v8:item><v8:lang>ru</v8:lang><v8:content>Попытка</v8:content></v8:item></Synonym>
+<Comment/>
+<Type><v8:Type>xs:decimal</v8:Type><v8:NumberQualifiers><v8:Digits>3</v8:Digits><v8:FractionDigits>0</v8:FractionDigits><v8:AllowedSign>Nonnegative</v8:AllowedSign></v8:NumberQualifiers></Type>
+<PasswordMode>false</PasswordMode>
+<Format/>
+<EditFormat/>
+<ToolTip/>
+<MarkNegatives>false</MarkNegatives>
+<Mask/>
+<MultiLine>false</MultiLine>
+<ExtendedEdit>false</ExtendedEdit>
+<MinValue xsi:nil="true"/>
+<MaxValue xsi:nil="true"/>
+<FillChecking>DontCheck</FillChecking>
+<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+<ChoiceParameterLinks/>
+<ChoiceParameters/>
+<QuickChoice>Auto</QuickChoice>
+<CreateOnInput>Auto</CreateOnInput>
+<ChoiceForm/>
+<LinkByType/>
+<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+<Indexing>DontIndex</Indexing><FullTextSearch>Use</FullTextSearch>
+</Properties>
+</Resource><Resource uuid="65241797-95fd-5566-8fab-0269821a4718">
+<Properties>
+<Name>ДанныеПовтора</Name>
+<Synonym><v8:item><v8:lang>ru</v8:lang><v8:content>Данные для повторной отправки</v8:content></v8:item></Synonym>
+<Comment/>
+<Type><v8:Type>v8:ValueStorage</v8:Type></Type>
+<PasswordMode>false</PasswordMode>
+<Format/>
+<EditFormat/>
+<ToolTip/>
+<MarkNegatives>false</MarkNegatives>
+<Mask/>
+<MultiLine>false</MultiLine>
+<ExtendedEdit>false</ExtendedEdit>
+<MinValue xsi:nil="true"/>
+<MaxValue xsi:nil="true"/>
+<FillChecking>DontCheck</FillChecking>
+<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+<ChoiceParameterLinks/>
+<ChoiceParameters/>
+<QuickChoice>Auto</QuickChoice>
+<CreateOnInput>Auto</CreateOnInput>
+<ChoiceForm/>
+<LinkByType/>
+<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+<Indexing>DontIndex</Indexing><FullTextSearch>Use</FullTextSearch>
+</Properties>
+</Resource><Resource uuid="6b71b34a-12e9-5a04-a787-6d72f902d721">
+<Properties>
+<Name>ПовторитьПосле</Name>
+<Synonym><v8:item><v8:lang>ru</v8:lang><v8:content>Следующая попытка</v8:content></v8:item></Synonym>
+<Comment/>
+<Type><v8:Type>xs:dateTime</v8:Type><v8:DateQualifiers><v8:DateFractions>DateTime</v8:DateFractions></v8:DateQualifiers></Type>
+<PasswordMode>false</PasswordMode>
+<Format/>
+<EditFormat/>
+<ToolTip/>
+<MarkNegatives>false</MarkNegatives>
+<Mask/>
+<MultiLine>false</MultiLine>
+<ExtendedEdit>false</ExtendedEdit>
+<MinValue xsi:nil="true"/>
+<MaxValue xsi:nil="true"/>
+<FillChecking>DontCheck</FillChecking>
+<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+<ChoiceParameterLinks/>
+<ChoiceParameters/>
+<QuickChoice>Auto</QuickChoice>
+<CreateOnInput>Auto</CreateOnInput>
+<ChoiceForm/>
+<LinkByType/>
+<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+<Indexing>DontIndex</Indexing><FullTextSearch>Use</FullTextSearch>
+</Properties>
+</Resource><Resource uuid="775f8c31-7e70-5622-9fb1-32bb308373e3">
+<Properties>
+<Name>ВОтправке</Name>
+<Synonym><v8:item><v8:lang>ru</v8:lang><v8:content>Повторная отправка выполняется</v8:content></v8:item></Synonym>
+<Comment/>
+<Type><v8:Type>xs:boolean</v8:Type></Type>
+<PasswordMode>false</PasswordMode>
+<Format/>
+<EditFormat/>
+<ToolTip/>
+<MarkNegatives>false</MarkNegatives>
+<Mask/>
+<MultiLine>false</MultiLine>
+<ExtendedEdit>false</ExtendedEdit>
+<MinValue xsi:nil="true"/>
+<MaxValue xsi:nil="true"/>
+<FillChecking>DontCheck</FillChecking>
+<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+<ChoiceParameterLinks/>
+<ChoiceParameters/>
+<QuickChoice>Auto</QuickChoice>
+<CreateOnInput>Auto</CreateOnInput>
+<ChoiceForm/>
+<LinkByType/>
+<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+<Indexing>DontIndex</Indexing><FullTextSearch>Use</FullTextSearch>
+</Properties>
+</Resource>
+<Form>ФормаСписка</Form>
+</ChildObjects>
+</InformationRegister>
+</MetaDataObject>

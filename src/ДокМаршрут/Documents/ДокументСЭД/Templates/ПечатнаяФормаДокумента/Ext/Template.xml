@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document xmlns="http://v8.1c.ru/8.2/data/spreadsheet" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<languageSettings>
+<currentLanguage>ru</currentLanguage>
+<defaultLanguage>ru</defaultLanguage>
+<languageInfo><id>ru</id><code>Русский</code><description>Русский</description></languageInfo>
+</languageSettings>
+<columns>
+<size>6</size>
+<columnsItem><index>0</index><column><formatIndex>1</formatIndex></column></columnsItem>
+<columnsItem><index>1</index><column><formatIndex>2</formatIndex></column></columnsItem>
+<columnsItem><index>2</index><column><formatIndex>3</formatIndex></column></columnsItem>
+<columnsItem><index>3</index><column><formatIndex>3</formatIndex></column></columnsItem>
+<columnsItem><index>4</index><column><formatIndex>3</formatIndex></column></columnsItem>
+<columnsItem><index>5</index><column><formatIndex>2</formatIndex></column></columnsItem>
+</columns>
+<rowsItem><index>0</index><row><c><c><f>4</f><tl><v8:item><v8:lang>ru</v8:lang><v8:content>Документ [Номер] от [Дата]</v8:content></v8:item></tl></c></c></row></rowsItem>
+<rowsItem><index>1</index><row><c><c><f>5</f><tl><v8:item><v8:lang>ru</v8:lang><v8:content>Вид: [ВидДокумента] · Категория: [Категория] · Статус: [Статус]</v8:content></v8:item></tl></c></c></row></rowsItem>
+<rowsItem><index>2</index><row><c><c><f>5</f><tl><v8:item><v8:lang>ru</v8:lang><v8:content>Автор: [Автор] · Ответственный: [Ответственный] · Руководитель: [Руководитель] · Этап [ТекущийЭтап] из [ВсегоЭтапов]</v8:content></v8:item></tl></c></c></row></rowsItem>
+<rowsItem><index>3</index><row><empty>true</empty></row></rowsItem>
+<rowsItem><index>4</index><row>
+<c><c><f>6</f><tl><v8:item><v8:lang>ru</v8:lang><v8:content>Поле</v8:content></v8:item></tl></c></c>
+<c><c><f>6</f><tl><v8:item><v8:lang>ru</v8:lang><v8:content>Значение</v8:content></v8:item></tl></c></c>
+</row></rowsItem>
+<rowsItem><index>5</index><row>
+<c><c><f>7</f><parameter>Заголовок</parameter></c></c>
+<c><c><f>7</f><parameter>ЗначениеСтрока</parameter></c></c>
+</row></rowsItem>
+<rowsItem><index>6</index><row><empty>true</empty></row></rowsItem>
+<rowsItem><index>7</index><row>
+<c><c><f>6</f><tl><v8:item><v8:lang>ru</v8:lang><v8:content>№</v8:content></v8:item></tl></c></c>
+<c><c><f>6</f><tl><v8:item><v8:lang>ru</v8:lang><v8:content>Этап</v8:content></v8:item></tl></c></c>
+<c><c><f>6</f><tl><v8:item><v8:lang>ru</v8:lang><v8:content>Согласующий</v8:content></v8:item></tl></c></c>
+<c><c><f>6</f><tl><v8:item><v8:lang>ru</v8:lang><v8:content>Решение</v8:content></v8:item></tl></c></c>
+<c><c><f>6</f><tl><v8:item><v8:lang>ru</v8:lang><v8:content>Дата</v8:content></v8:item></tl></c></c>
+<c><c><f>6</f><tl><v8:item><v8:lang>ru</v8:lang><v8:content>Комментарий</v8:content></v8:item></tl></c></c>
+</row></rowsItem>
+<rowsItem><index>8</index><row>
+<c><c><f>7</f><parameter>НомерЭтапа</parameter></c></c>
+<c><c><f>7</f><parameter>НазваниеЭтапа</parameter></c></c>
+<c><c><f>7</f><parameter>Согласующий</parameter></c></c>
+<c><c><f>7</f><parameter>Решение</parameter></c></c>
+<c><c><f>7</f><parameter>ДатаРешения</parameter></c></c>
+<c><c><f>7</f><parameter>Комментарий</parameter></c></c>
+</row></rowsItem>
+<rowsItem><index>9</index><row><c><c><f>5</f><tl><v8:item><v8:lang>ru</v8:lang><v8:content>Сформировано ДокМаршрут</v8:content></v8:item></tl></c></c></row></rowsItem>
+<templateMode>true</templateMode>
+<defaultFormatIndex>8</defaultFormatIndex>
+<height>10</height>
+<vgRows>10</vgRows>
+<merge><r>0</r><c>0</c><w>5</w></merge>
+<merge><r>1</r><c>0</c><w>5</w></merge>
+<merge><r>2</r><c>0</c><w>5</w></merge>
+<merge><r>9</r><c>0</c><w>5</w></merge>
+<namedItem xsi:type="NamedItemCells"><name>Шапка</name><area><type>Rows</type><beginRow>0</beginRow><endRow>3</endRow><beginColumn>-1</beginColumn><endColumn>-1</endColumn></area></namedItem>
+<namedItem xsi:type="NamedItemCells"><name>ЗаголовокПолей</name><area><type>Rows</type><beginRow>4</beginRow><endRow>4</endRow><beginColumn>-1</beginColumn><endColumn>-1</endColumn></area></namedItem>
+<namedItem xsi:type="NamedItemCells"><name>СтрокаПоля</name><area><type>Rows</type><beginRow>5</beginRow><endRow>5</endRow><beginColumn>-1</beginColumn><endColumn>-1</endColumn></area></namedItem>
+<namedItem xsi:type="NamedItemCells"><name>ЗаголовокМаршрута</name><area><type>Rows</type><beginRow>7</beginRow><endRow>7</endRow><beginColumn>-1</beginColumn><endColumn>-1</endColumn></area></namedItem>
+<namedItem xsi:type="NamedItemCells"><name>СтрокаМаршрута</name><area><type>Rows</type><beginRow>8</beginRow><endRow>8</endRow><beginColumn>-1</beginColumn><endColumn>-1</endColumn></area></namedItem>
+<namedItem xsi:type="NamedItemCells"><name>Подвал</name><area><type>Rows</type><beginRow>9</beginRow><endRow>9</endRow><beginColumn>-1</beginColumn><endColumn>-1</endColumn></area></namedItem>
+<line width="1" gap="false"><v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style></line>
+<format><width>180</width></format>
+<format><width>300</width></format>
+<format><width>140</width></format>
+<format><horizontalAlignment>Left</horizontalAlignment><textPlacement>Wrap</textPlacement><fillType>Template</fillType></format>
+<format><horizontalAlignment>Left</horizontalAlignment><textPlacement>Wrap</textPlacement><fillType>Template</fillType></format>
+<format><border>0</border><horizontalAlignment>Center</horizontalAlignment><fillType>Text</fillType></format>
+<format><border>0</border><horizontalAlignment>Left</horizontalAlignment><fillType>Parameter</fillType></format>
+<format><width>72</width></format>
+</document>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.17">
+<Enum uuid="fca3ab28-fd23-5533-9058-eacfa9a3b8c5">
+<InternalInfo><xr:GeneratedType name="EnumRef.СтатусыДокументов" category="Ref"><xr:TypeId>f33dbf70-16c0-5f03-a112-e3725af04143</xr:TypeId><xr:ValueId>68760c6a-3423-5c5a-9e55-debbc3187b03</xr:ValueId></xr:GeneratedType><xr:GeneratedType name="EnumManager.СтатусыДокументов" category="Manager"><xr:TypeId>9e68db6f-57fe-52c9-ad64-60bf1052af90</xr:TypeId><xr:ValueId>02198d34-6472-53a6-aaf9-1d1cf7da67f2</xr:ValueId></xr:GeneratedType><xr:GeneratedType name="EnumList.СтатусыДокументов" category="List"><xr:TypeId>3e5ec2ac-5cbb-58cc-a0aa-de72b969e187</xr:TypeId><xr:ValueId>bcb67807-04a8-5b74-b9a5-a4ac2f9c857f</xr:ValueId></xr:GeneratedType></InternalInfo>
+<Properties>
+<Name>СтатусыДокументов</Name>
+<Synonym><v8:item><v8:lang>ru</v8:lang><v8:content>Статусы документов</v8:content></v8:item></Synonym>
+<Comment/>
+<UseStandardCommands>true</UseStandardCommands>
+<QuickChoice>true</QuickChoice>
+<ChoiceMode>BothWays</ChoiceMode>
+<DefaultListForm/>
+<DefaultChoiceForm/>
+<AuxiliaryListForm/>
+<AuxiliaryChoiceForm/>
+<ListPresentation/>
+<ExtendedListPresentation/>
+<Explanation/>
+<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+</Properties>
+<ChildObjects>
+<EnumValue uuid="c1f9c4a7-0df9-5e5a-a46b-19727d8ba81c"><Properties><Name>Черновик</Name><Synonym><v8:item><v8:lang>ru</v8:lang><v8:content>Черновик</v8:content></v8:item></Synonym><Comment/></Properties></EnumValue><EnumValue uuid="b770f9f1-ecd6-5020-8909-c25d8359325d"><Properties><Name>НаСогласовании</Name><Synonym><v8:item><v8:lang>ru</v8:lang><v8:content>На согласовании</v8:content></v8:item></Synonym><Comment/></Properties></EnumValue><EnumValue uuid="f33a9d3d-eb1e-53a7-a891-820e9f82bc12"><Properties><Name>Согласован</Name><Synonym><v8:item><v8:lang>ru</v8:lang><v8:content>Согласован</v8:content></v8:item></Synonym><Comment/></Properties></EnumValue><EnumValue uuid="d21a09a0-72a3-57b3-96a0-a7d20dd2b433"><Properties><Name>Отклонен</Name><Synonym><v8:item><v8:lang>ru</v8:lang><v8:content>Отклонён</v8:content></v8:item></Synonym><Comment/></Properties></EnumValue><EnumValue uuid="1ab36be5-5751-5ea9-8928-b2d5b79fa658"><Properties><Name>НаДоработке</Name><Synonym><v8:item><v8:lang>ru</v8:lang><v8:content>На доработке</v8:content></v8:item></Synonym><Comment/></Properties></EnumValue>
+</ChildObjects>
+</Enum>
+</MetaDataObject>
